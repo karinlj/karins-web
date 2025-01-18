@@ -29,12 +29,13 @@ const AboutMe = () => {
 
   return (
     <section className="about_me_section" id="about_me">
-      <section className="content_section large_text">
+      <section className="content_section">
         <div className="container">
           <h2 className="small_heading dark">{heading}</h2>
 
           <div className="row justify-content-between">
-            <div className="col-12 col-lg-6 col-xl-8">
+            <div className="col-12 col-md-6 col-xl-8">
+              <div className="large_text">
               {aboutData ? (
                 <>
                   <div>
@@ -44,8 +45,9 @@ const AboutMe = () => {
               ) : (
                 ""
               )}
+                </div>
             </div>
-            <div className="col-12 col-lg-6 col-xl-4">
+            <div className="col-12 col-md-6 col-xl-4">
               <div className="styled_card pict">
                 {aboutData ? (
                   <>
@@ -62,7 +64,7 @@ const AboutMe = () => {
               </div>
             </div>
           </div>
-          <p className="home_links">
+          <p className="link_text">
             Ta en titt på ett urval av mina&nbsp;
             <a href="#cases" className="projects_link">
               Projekt

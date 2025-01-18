@@ -5,8 +5,8 @@ import {  useEffect, useState } from "react";
 import TopSection from "../components/TopSection";
 import AboutMe from "../components/AboutMe";
 import Services from "../components/Services";
-
-
+import Cases from "../components/Cases";
+import Process from "../components/Process";
 const Home = () => {
 
   //stop the fetch when component using it unmounts
@@ -39,7 +39,8 @@ const Home = () => {
 <TopSection/>
 <AboutMe/>
 <Services/>
-
+<Cases/>
+<Process/>
   </main>
   )
 };

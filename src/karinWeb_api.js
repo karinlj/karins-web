@@ -6,9 +6,9 @@ export const getTopData = async () => {
     const response = await client.getEntry("7fFog2o2OZxluuQG1AkwSG")
 
     if (!response) {
-      throw new Error("No OK Home data response");
+      throw new Error("No OK Top data response");
     }
-     console.log("home_response:", response);
+    //  console.log("top_response:", response);
     return response;
   } catch (err) {
     console.log("error: ", err);
@@ -50,9 +50,43 @@ export const getServicesData = async () => {
 
       });
       if (!response || !response.items) {
-        throw new Error("No OK About data response");
+        throw new Error("No OK ServiceItem data response");
       }
     //    console.log("serviceItem_response:", response);
+      const dataFields = response.items;
+      return dataFields;
+    } catch (err) {
+      console.log("error: ", err);
+    }
+  };
+  export const getCaseItemsData = async () => {
+    try {
+      const response = await client.getEntries({
+        content_type: "caseItem",
+        order: "fields.orderNumber",
+
+      });
+      if (!response || !response.items) {
+        throw new Error("No OK CaseItems data response");
+      }
+    //  console.log("CaseItems_response:", response);
+      const dataFields = response.items;
+      return dataFields;
+    } catch (err) {
+      console.log("error: ", err);
+    }
+  };
+  export const getTestimonialItemsData = async () => {
+    try {
+      const response = await client.getEntries({
+        content_type: "testimonialItem",
+        order: "fields.orderNumber",
+
+      });
+      if (!response || !response.items) {
+        throw new Error("No OK testimonialItems data response");
+      }
+     console.log("testimonialItems_response:", response);
       const dataFields = response.items;
       return dataFields;
     } catch (err) {

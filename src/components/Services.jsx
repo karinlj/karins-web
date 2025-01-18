@@ -56,27 +56,26 @@ const Services = () => {
       <section className="content_section large_text white">
         <div className="container">
           <div className="row justify-content-between">
-            <div className="col-12 col-md-4">
-              <p>{description}</p>
+            <div className="col-12 col-lg-4">
+              <p className="services_section_description">{description}</p>
             </div>
-            <div className="col-12 col-md-8">
+            <div className="col-12 col-lg-8">
               <section className="service_items_section">
                 <div className="container">
                   <div className="row justify-content-between">
                     {servicesItems &&
                       servicesItems.map((item, index) => {
                         return (
-                          <div className="col-12 col-md-6" key={index}>
+                          <div className="col-12 col-sm-6" key={index}>
                             <div className="styled_card">
                               <img
                                 src={item.fields.image.fields.file.url}
                                 alt={item.fields.image.fields.title}
-                                className="service_item_pict"
+                                className=""
                                 style={{ width: "100%", height: "100%" }}
                               />
-
-                              <h3>{item.fields.heading}</h3>
-                              <p className="service_item_description">
+                              <h3 className="medium_text">{item.fields.heading}</h3>
+                              <p className="">
                                 {item.fields.description}
                               </p>
                             </div>
@@ -90,11 +89,11 @@ const Services = () => {
           </div>
 
           <section className="services_news_banner">
-            <h3>{newsBannerHeading}</h3>
+            <h3 className="heading_2">{newsBannerHeading}</h3>
             <p>{newsBannerText}</p>
           </section>
 
-          <div className="">
+          <div className="link_text">
             {" "}
             <a href={link} className="services_link">
               {linkText}

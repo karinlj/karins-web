@@ -114,7 +114,7 @@ html {
 }
 body {
   position: relative;
-   font-size: 16px;
+  font-size: 16px;
   color: $textcolor_dark;
   font-weight: 400;
   transition: all 0.2s linear;
@@ -180,7 +180,7 @@ h5 {
 
 a {
   color: $linkcolor;
-  &.btn_link{
+  &.btn_link {
     text-decoration: none;
     display: inline-block;
     color: $textcolor_white;
@@ -207,7 +207,7 @@ a {
   padding: 1rem;
   color: $lilacPastel;
 }
-//font-styles text
+//fonts - styles and sizes
 .content_section {
   &.white {
     color: $textcolor_white;
@@ -216,7 +216,7 @@ a {
     color: $textcolor_dark;
   }
 }
-.right{
+.right {
   text-align: right;
 }
 .small_heading {
@@ -231,31 +231,35 @@ a {
   // }
 }
 .medium_text {
-  font-size: 1.3rem;
+  font-weight: bold;
+  font-size: 1.1rem;
   @media all and (min-width: $laptopL) {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   &.dark {
     color: $textcolor_dark;
   }
 }
 .large_text {
+  font-size: 1.7rem;
+  font-weight: 700;
+  @media all and (min-width: $laptopL) {
+    font-size: 2.4rem;
+  }
   p {
     font-size: 1.7rem;
     font-weight: 700;
-    position: relative;
-    z-index: 10;
     @media all and (min-width: $laptopL) {
       font-size: 2.4rem;
     }
   }
 }
-.heading_3 {
+.heading_1 {
   margin-bottom: 0.1rem;
   color: $textcolor_white;
   font-size: 2.3rem;
   font-weight: 900;
-   line-height: 1.1;
+  line-height: 1.1;
   @media all and (min-width: $mobileS) {
     font-size: 3.8rem;
   }
@@ -276,7 +280,33 @@ a {
   }
 }
 
+.heading_2 {
+  // color: $textcolor_white;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.1;
+  @media all and (min-width: $mobileS) {
+    font-size: 2rem;
+  }
+  @media all and (min-width: $mobileM) {
+    font-size: 2.2rem;
+  }
+  @media all and (min-width: $laptop) {
+    font-size: 3rem;
+  }
+  @media all and (min-width: $laptopL) {
+    font-size: 5rem;
+  }
+}
 //links
+.link_text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  @media all and (min-width: $mobileM) {
+    font-size: 1.2rem;
+  }
+}
 .right_link {
   display: flex;
   justify-content: flex-end;
@@ -301,9 +331,7 @@ section {
   }
 }
 .container {
-  // max-width: 1100px;
-  max-width: 1000px;
-
+  max-width: 1100px;
   width: 100%;
   margin: 0 auto;
   @media all and (min-width: 1700px) {
@@ -361,6 +389,7 @@ section {
   margin-bottom: 1.5rem;
   border-radius: 25px;
   //clamp(minimum, preferred, maximum);
+  min-height: 380px;
   height: clamp(20rem, 25rem, 30rem);
   box-shadow: $themeBoxShadowLight;
   @media all and (min-width: $mobileS) {
@@ -384,10 +413,6 @@ section {
     border-radius: 25px;
     margin-bottom: 1rem;
   }
-  p{
-    font-size: 1rem;
-    font-weight: 400;;
-  }
 }
 /**********************
   top_section
@@ -400,9 +425,16 @@ section {
     padding-top: 0;
     margin-bottom: 0.5rem;
   }
-  .arrow_pict{
-    width: 12rem;
-    margin-left: -5rem;
+  .medium_text{
+    font-weight: 400;
+    margin-top: 2rem;
+  }
+  .arrow_pict {
+    width: 10rem;
+    @media all and (min-width: $desktopL) {
+      width: 12rem;
+      margin-left: -3rem;
+    }
   }
 }
 
@@ -413,28 +445,23 @@ section {
   min-height: 900px;
   padding-bottom: 4rem;
   padding-top: 3rem;
-  background:
-  linear-gradient(-90deg, rgba(31, 71, 117, 0.08) 1px, transparent 1px),
-  linear-gradient(rgba(63, 125, 196, 0.08) 1px, transparent 1px),
-  #fff;
-background-size:
-  30px 30px,
-  30px 30px,
-  80px 80px,
-  80px 80px,
-  80px 80px,
-  80px 80px,
-  80px 80px,
-  80px 80px;
- background-color: #fff;
-  .content_section {
-    .row {
-      flex-direction: column-reverse;
-      @media all and (min-width: $laptop) {
-        flex-direction: row;
-      }
-    }
-  }
+  background: linear-gradient(
+      -90deg,
+      rgba(31, 71, 117, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(rgba(63, 125, 196, 0.08) 1px, transparent 1px), #fff;
+  background-size: 30px 30px, 30px 30px, 80px 80px, 80px 80px, 80px 80px,
+    80px 80px, 80px 80px, 80px 80px;
+  background-color: #fff;
+  // .content_section {
+  //   .row {
+  //     flex-direction: column-reverse;
+  //     @media all and (min-width: $laptop) {
+  //       flex-direction: row;
+  //     }
+  //   }
+  // }
   hr {
     visibility: hidden;
     padding: 1rem 0;
@@ -483,7 +510,6 @@ background-size:
   padding-bottom: 4rem;
   background: $themecolorPurple;
   color: $textcolor_white;
-
   .services_link {
     font-size: 1.1rem;
     display: inline-block;
@@ -497,10 +523,68 @@ background-size:
       filter: drop-shadow(0 0 3px white);
     }
   }
-
+  .services_section_description {
+    margin-bottom: 3rem;
+  }
   .styled_card {
-    background: $textcolor_white;
+    background: #fff;
     padding: 1rem 1rem 2rem 1rem;
+    height: auto;
+    // @media all and (min-width: $mobileS) {
+    //   padding: 1rem 1rem 7rem 1rem;
+    // }
+    // @media all and (min-width: $mobileM) {
+    //   padding: 0.5rem 0.5rem 3.5rem 0.5rem;
+    // }
+    // @media all and (min-width: $laptop) {
+    //   padding: 0.7rem 0.7rem 5rem 0.7rem;
+    // }
+    // @media all and (min-width: $laptopL) {
+    //   padding: 1rem 1rem 7rem 1rem;
+    // }
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+  .services_news_banner {
+    margin-top: 3rem;
+  }
+}
+
+/**********************
+ cases_section
+***********************/
+.cases_section {
+  min-height: 1000px;
+  padding-bottom: 4rem;
+  // background: $themecolorLilaLight;
+  .testimonial_items_section {
+    margin-bottom: 3rem;
+  }
+  .testimonial_item {
+    margin-bottom: 3.5rem;
+  }
+  .testimonial_item_name {
+    margin-top: 1.5rem;
+    font-weight: 700;
+  }
+  .styled_card {
+    padding: 1rem 1rem 2rem 1rem;
+    height: auto;
+    transition: all 0.25s ease-out;
+    position: relative;
+    &:hover {
+      transform: translateY(-4px);
+      // color: $linkcolorLight;
+
+      // .case_item_heading {
+      //    color: $linkcolorLight;
+      // }
+      p {
+        text-decoration: underline;
+      }
+    }
     // @media all and (min-width: $mobileS) {
     //   padding: 1rem 1rem 7rem 1rem;
     // }
@@ -514,6 +598,29 @@ background-size:
     //   padding: 1rem 1rem 7rem 1rem;
     // }
   }
+  .case_item_link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 20;
+    color: transparent;
+    text-decoration: none;
+  }
+  .case_item_heading {
+    text-transform: uppercase;
+    color: $themecolorLilaDark;
+  }
+}
+/**********************
+ process_section
+***********************/
+.process_section {
+  min-height: 800px;
+  padding-bottom: 4rem;
+  background: $themecolorLilaSuperDark;
+  color: $textcolor_white;
 }
 
 //old css
@@ -524,11 +631,11 @@ background-size:
 .nav_header {
   background: $themecolorLilaDark;
   width: 100%;
-.logo_link{
-  display: flex;
-  align-items: center;
-}
-  .logo{
+  .logo_link {
+    display: flex;
+    align-items: center;
+  }
+  .logo {
     width: 3rem;
   }
   // .home_link {
@@ -829,7 +936,6 @@ background-size:
   }
   p {
     margin-bottom: 0.5rem;
-    font-size: $small_text;
   }
   .heading_3 span {
     display: block;
@@ -892,6 +998,7 @@ background-size:
 }
 p.footer_copy {
   margin-top: 2rem;
+  font-size: 0.8rem;
 }
 
 // .footer_section {
