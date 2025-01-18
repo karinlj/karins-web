@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAboutData as getAboutData_API } from "../karinWeb_api";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import skill_icons from "../images/iconsFrame.png";
 
 const AboutMe = () => {
   const [aboutData, setAboutData] = useState(null);
@@ -24,17 +23,15 @@ const AboutMe = () => {
     return <div className="loading">Loading ...</div>;
   }
 
-  const heading = aboutData.fields.heading;
-  const content = aboutData.fields.content;
-  const mePict = aboutData?.fields.mePict;
+  const { heading, content, mePict } = aboutData.fields;
   const mePictSrc = `https:${mePict.fields.file.url}`;
   const mePictTitle = mePict.fields.title;
 
   return (
-    <section className="about_me_section">
-      <section className="content_section large_text white">
+    <section className="about_me_section" id="about_me">
+      <section className="content_section large_text">
         <div className="container">
-        <h2 className="small_heading">{heading}</h2>
+          <h2 className="small_heading dark">{heading}</h2>
 
           <div className="row justify-content-between">
             <div className="col-12 col-lg-6 col-xl-8">
@@ -47,15 +44,6 @@ const AboutMe = () => {
               ) : (
                 ""
               )}
-
-              <div>
-                <img
-                  src={skill_icons}
-                  alt="skill_icons"
-                  className=""
-                  style={{ width: "400px", height: "auto", marginTop: "2rem" }}
-                />
-              </div>
             </div>
             <div className="col-12 col-lg-6 col-xl-4">
               <div className="styled_card pict">
@@ -74,6 +62,12 @@ const AboutMe = () => {
               </div>
             </div>
           </div>
+          <p className="home_links">
+            Ta en titt på ett urval av mina&nbsp;
+            <a href="#cases" className="projects_link">
+              Projekt
+            </a>
+          </p>
         </div>
       </section>
     </section>

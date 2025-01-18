@@ -114,7 +114,7 @@ html {
 }
 body {
   position: relative;
-  // font-size: 0.9rem;
+   font-size: 16px;
   color: $textcolor_dark;
   font-weight: 400;
   transition: all 0.2s linear;
@@ -180,7 +180,20 @@ h5 {
 
 a {
   color: $linkcolor;
+  &.btn_link{
+    text-decoration: none;
+    display: inline-block;
+    color: $textcolor_white;
+    background: $themecolorLilaSuperDark;
+    padding: 0.7rem 1.5rem 0.8rem 1.5rem;
+    border-radius: $themeBorderRadius;
+    margin-top: 1.5rem;
+    min-width: 7rem;
+    text-align: center;
+    font-weight: 600;
+  }
 }
+
 .text-right {
   text-align: right;
 }
@@ -190,46 +203,21 @@ a {
   text-transform: uppercase;
   font-size: 1.5rem;
 }
-
 .loading {
   padding: 1rem;
   color: $lilacPastel;
 }
 //font-styles text
-// .home_heading {
-//   display: block;
-//   margin-bottom: 1rem;
-//   font-size: 5.5rem;
-//   color: $themecolorPink;
-//   @media all and (min-width: $mobileS) {
-//     font-size: 9rem;
-//     text-align: center;
-//   }
-//   @media all and (min-width: $mobileM) {
-//     font-size: 10rem;
-//   }
-//   @media all and (min-width: $laptop) {
-//     font-size: 14rem;
-//   }
-//   @media all and (min-width: $laptopL) {
-//     font-size: 18rem;
-//   }
-// }
-.home_small_heading {
-  display: block;
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  // @media all and (min-width: $mobileS) {
-  //   font-size: 1.1rem;
-  // }
-  // @media all and (min-width: $mobileM) {
-  //   font-size: 1.2rem;
-  // }
-  @media all and (min-width: $laptopL) {
-    font-size: 1.1rem;
+.content_section {
+  &.white {
+    color: $textcolor_white;
   }
+  &.dark {
+    color: $textcolor_dark;
+  }
+}
+.right{
+  text-align: right;
 }
 .small_heading {
   text-transform: uppercase;
@@ -239,14 +227,20 @@ a {
   @media all and (min-width: $mobileM) {
     font-size: 1.3rem;
   }
-  &.resume {
+  // &.dark {
+  // }
+}
+.medium_text {
+  font-size: 1.3rem;
+  @media all and (min-width: $laptopL) {
+    font-size: 1.4rem;
+  }
+  &.dark {
     color: $textcolor_dark;
-    margin: 1rem 0 2rem 0;
   }
 }
 .large_text {
   p {
-    // font-size: 1.7rem !important;
     font-size: 1.7rem;
     font-weight: 700;
     position: relative;
@@ -261,7 +255,7 @@ a {
   color: $textcolor_white;
   font-size: 2.3rem;
   font-weight: 900;
-  // line-height: 1.1;
+   line-height: 1.1;
   @media all and (min-width: $mobileS) {
     font-size: 3.8rem;
   }
@@ -272,7 +266,7 @@ a {
     font-size: 5rem;
   }
   @media all and (min-width: $laptopL) {
-    font-size: 6rem;
+    font-size: 7rem;
   }
   &.dark {
     color: $textcolor_dark;
@@ -307,11 +301,14 @@ section {
   }
 }
 .container {
-  max-width: 1100px;
+  // max-width: 1100px;
+  max-width: 1000px;
+
   width: 100%;
   margin: 0 auto;
   @media all and (min-width: 1700px) {
-    max-width: 1400px;
+    // max-width: 1400px;
+    max-width: 1300px;
   }
 }
 
@@ -359,12 +356,13 @@ section {
 ***********************/
 .styled_card {
   background: #f0eaea;
+  color: $themecolorLilaSuperDark;
   padding: 1rem 1rem 5rem 1rem;
   margin-bottom: 1.5rem;
   border-radius: 25px;
   //clamp(minimum, preferred, maximum);
   height: clamp(20rem, 25rem, 30rem);
-
+  box-shadow: $themeBoxShadowLight;
   @media all and (min-width: $mobileS) {
     height: clamp(30rem, 40rem, 45rem);
     padding: 1rem 1rem 7rem 1rem;
@@ -379,12 +377,16 @@ section {
   @media all and (min-width: $laptopL) {
     padding: 1rem 1rem 7rem 1rem;
   }
-
   img {
     object-fit: cover;
     // object-position: 50% 70%;
     width: 100%;
     border-radius: 25px;
+    margin-bottom: 1rem;
+  }
+  p{
+    font-size: 1rem;
+    font-weight: 400;;
   }
 }
 /**********************
@@ -393,75 +395,14 @@ section {
 .top_section {
   height: 40rem;
   padding-top: 5rem;
-  background: $themecolorPink;
-  background: $themecolorGreenDark;
-  background: $themecolorGreenLight;
-  background: $themecolorGreenMedium;
-  background: $themecolorDuskPink;
-  background: $themecolorDuskPinkDark;
-  background: $themecolorPurple;
-  background: $themecolorLilaLightest;
-
-  .top_section_content {
-    .row {
-      flex-direction: column-reverse;
-      @media all and (min-width: $laptop) {
-        flex-direction: row;
-      }
-    }
-    .top_section_description {
-      font-size: $medium-text;
-      &.right {
-        text-align: right;
-      }
-    }
+  background: $themecolorLilaDark;
+  .small_heading {
+    padding-top: 0;
+    margin-bottom: 0.5rem;
   }
-  hr {
-    visibility: hidden;
-    padding: 1rem 0;
-  }
-  // .styled_card.pict {
-  //   @media all and (min-width: $mobileS) {
-  //     height: clamp(30rem, 35rem, 40rem);
-  //     padding: 1rem 1rem 7rem 1rem;
-  //   }
-  //   @media all and (min-width: $mobileM) {
-  //     padding: 1rem 1rem 7rem 1rem;
-  //   }
-  //   @media all and (min-width: $laptop) {
-  //     margin-top: 0;
-  //     height: clamp(25rem, 30rem, 35rem);
-  //     padding: 1rem 1rem 7rem 1rem;
-  //   }
-  // }
-  // .me_pict {
-  //   top: 0;
-  //   right: 0;
-  // }
-  // .me_pict_caption {
-  //   color: $textcolor_lighter;
-  //   font-size: 1rem;
-  //   margin-top: 1rem;
-  //   @media all and (min-width: $laptop) {
-  //     font-size: 1.1rem;
-  //   }
-  // }
-
-  .home_links {
-    padding-top: 2rem;
-    font-size: 1.1rem;
-    @media all and (min-width: $mobileM) {
-      font-size: 1.3rem;
-    }
-  }
-  .projects_link {
-    display: inline-block;
-    padding-bottom: 0.5rem;
-    color: $linkcolor;
-    transition: all 1s ease;
-    &:hover {
-      filter: drop-shadow(0 0 3px white);
-    }
+  .arrow_pict{
+    width: 12rem;
+    margin-left: -5rem;
   }
 }
 
@@ -471,9 +412,21 @@ section {
 .about_me_section {
   min-height: 900px;
   padding-bottom: 4rem;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+  padding-top: 3rem;
+  background:
+  linear-gradient(-90deg, rgba(31, 71, 117, 0.08) 1px, transparent 1px),
+  linear-gradient(rgba(63, 125, 196, 0.08) 1px, transparent 1px),
+  #fff;
+background-size:
+  30px 30px,
+  30px 30px,
+  80px 80px,
+  80px 80px,
+  80px 80px,
+  80px 80px,
+  80px 80px,
+  80px 80px;
+ background-color: #fff;
   .content_section {
     .row {
       flex-direction: column-reverse;
@@ -504,22 +457,14 @@ section {
     top: 0;
     right: 0;
   }
-  .me_pict_caption {
-    color: $textcolor_lighter;
-    font-size: 1rem;
-    margin-top: 1rem;
-    @media all and (min-width: $laptop) {
-      font-size: 1.1rem;
-    }
-  }
-
-  .home_links {
-    padding-top: 2rem;
-    font-size: 1.1rem;
-    @media all and (min-width: $mobileM) {
-      font-size: 1.3rem;
-    }
-  }
+  // .me_pict_caption {
+  //   color: $textcolor_lighter;
+  //   font-size: 1rem;
+  //   margin-top: 1rem;
+  //   @media all and (min-width: $laptop) {
+  //     font-size: 1.1rem;
+  //   }
+  // }
   .projects_link {
     display: inline-block;
     padding-bottom: 0.5rem;
@@ -552,18 +497,23 @@ section {
       filter: drop-shadow(0 0 3px white);
     }
   }
-  //service_item
-  .service_items_section{
-    margin-top: 5rem;
-  }
-  .styled_card{
+
+  .styled_card {
     background: $textcolor_white;
-    color: $themecolorLilaSuperDark;
-    box-shadow: $themeBoxShadowLight;
+    padding: 1rem 1rem 2rem 1rem;
+    // @media all and (min-width: $mobileS) {
+    //   padding: 1rem 1rem 7rem 1rem;
+    // }
+    // @media all and (min-width: $mobileM) {
+    //   padding: 0.5rem 0.5rem 3.5rem 0.5rem;
+    // }
+    // @media all and (min-width: $laptop) {
+    //   padding: 0.7rem 0.7rem 5rem 0.7rem;
+    // }
+    // @media all and (min-width: $laptopL) {
+    //   padding: 1rem 1rem 7rem 1rem;
+    // }
   }
-.service_item_description {
-  font-size: 16px;
-}
 }
 
 //old css
@@ -572,25 +522,32 @@ section {
    header and nav
 ***********************/
 .nav_header {
-  background: $themecolorLilaLightest;
+  background: $themecolorLilaDark;
   width: 100%;
-  .home_link {
-    a {
-      font-size: 2.5rem;
-      font-weight: 900;
-      color: $navcolor;
-      white-space: nowrap;
-      margin-right: 5rem;
-      text-decoration: none;
-      &:hover {
-        filter: brightness(85%);
-        -webkit-filter: brightness(85%);
-        transition: all 1s ease;
-        border: none;
-        text-decoration: none;
-      }
-    }
+.logo_link{
+  display: flex;
+  align-items: center;
+}
+  .logo{
+    width: 3rem;
   }
+  // .home_link {
+  //   a {
+  //     font-size: 2.5rem;
+  //     font-weight: 900;
+  //     color: $navcolor;
+  //     white-space: nowrap;
+  //     margin-right: 5rem;
+  //     text-decoration: none;
+  //     &:hover {
+  //       filter: brightness(85%);
+  //       -webkit-filter: brightness(85%);
+  //       transition: all 1s ease;
+  //       border: none;
+  //       text-decoration: none;
+  //     }
+  //   }
+  // }
   .navbar_bigscreen {
     padding: 0.5rem 0;
     flex-wrap: nowrap;

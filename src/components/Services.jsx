@@ -11,7 +11,7 @@ const Services = () => {
   const getServicesData = async () => {
     try {
       const data = await getServicesData_API();
-      console.log("data", data);
+      // console.log("Services_data", data);
       setServicesData(data);
     } catch (error) {
       console.error("Error fetching services data:", error);
@@ -21,7 +21,7 @@ const Services = () => {
   const getServicesItems = async () => {
     try {
       const data = await getServiceItemData_API();
-      console.log("data", data);
+      // console.log("ServicesItems_data", data);
       setServicesItems(data);
     } catch (error) {
       console.error("Error fetching service items data:", error);
@@ -39,54 +39,68 @@ const Services = () => {
   if (!servicesData || !servicesItems) {
     return <div className="loading">Loading ...</div>;
   }
-
-  const heading = servicesData.fields.heading;
-  const description = servicesData.fields.description;
-  const moreAboutLinkText = servicesData.fields.linkText;
-  const moreAboutLink = servicesData.fields.link;
+  const {
+    heading,
+    description,
+    linkText,
+    link,
+    newsBannerHeading,
+    newsBannerText,
+  } = servicesData.fields; 
 
   return (
-    <section className="services_section">
+    <section className="services_section" id="services">
       <div className="container">
         <h2 className="small_heading">{heading}</h2>
       </div>
       <section className="content_section large_text white">
         <div className="container">
-          <p>{description}</p>
-          <div className="row justify-content-center align-items-center">
-            <div className="col-10">
-            <section className="service_items_section">
+          <div className="row justify-content-between">
+            <div className="col-12 col-md-4">
+              <p>{description}</p>
+            </div>
+            <div className="col-12 col-md-8">
+              <section className="service_items_section">
+                <div className="container">
+                  <div className="row justify-content-between">
+                    {servicesItems &&
+                      servicesItems.map((item, index) => {
+                        return (
+                          <div className="col-12 col-md-6" key={index}>
+                            <div className="styled_card">
+                              <img
+                                src={item.fields.image.fields.file.url}
+                                alt={item.fields.image.fields.title}
+                                className="service_item_pict"
+                                style={{ width: "100%", height: "100%" }}
+                              />
 
-              {servicesItems &&
-                servicesItems.map((item, index) => {
-                  return (
-                    <div className="col-12 col-md-6" key={index}>
-
-                      <div className="styled_card">
-                        <img
-                          src={item.fields.image.fields.file.url}
-                          alt={item.fields.image.fields.title}
-                          className="me_pict"
-                          style={{ width: "100%", height: "100%" }}
-                        />
-
-                        <h3>{item.fields.heading}</h3>
-                        <p className="service_item_description">{item.fields.description}</p>
-                      </div>
-
-                    </div>
-                  );
-                })}
-              <div className="text-center">
-                {" "}
-                <a href={moreAboutLink} className="services_link">
-                  {moreAboutLinkText}
-                </a>
-              </div>
+                              <h3>{item.fields.heading}</h3>
+                              <p className="service_item_description">
+                                {item.fields.description}
+                              </p>
+                            </div>
+                          </div>
+                        );
+                      })}
+                  </div>
+                </div>
               </section>
             </div>
           </div>
+
+          <section className="services_news_banner">
+            <h3>{newsBannerHeading}</h3>
+            <p>{newsBannerText}</p>
+          </section>
+
+          <div className="">
+            {" "}
+            <a href={link} className="services_link">
+              {linkText}
+            </a>
           </div>
+        </div>
       </section>
     </section>
   );

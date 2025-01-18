@@ -43,13 +43,20 @@ $bluecolor: #2e9ce6;
 $themecolorPink: #FFB8F1; 
 $orange: #f68c70; 
 $pink_lightest: #fcd9cf; 
-
-$linkcolor: $themecolorLilaDark;
- $navcolor: $textcolor_dark;
+$greenVibrant: #82EAAD;
+$greenVibrantDarker: #1DAA58;
+$linkcolor: $greenVibrantDarker;
+ $navcolor: $textcolor_white;
 
 $themeBorderRadius: 20px;
 $themeBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.8);
 $themeBoxShadowLight: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 
+//font sizes
+//mobile
+
+//laptop ($laptop)
+
+//desktop ($desktopL)
 $small_text: 0.8rem;
 $medium-text: 1.3rem;

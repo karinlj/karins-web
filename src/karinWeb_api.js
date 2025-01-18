@@ -8,7 +8,7 @@ export const getTopData = async () => {
     if (!response) {
       throw new Error("No OK Home data response");
     }
-    // console.log("home_response:", response);
+     console.log("home_response:", response);
     return response;
   } catch (err) {
     console.log("error: ", err);
@@ -42,21 +42,17 @@ export const getServicesData = async () => {
     }
   };
 
-// client
-//   .getEntry("<entry_id>")
-//   .then((entry) => console.log(entry))
-//   .catch(console.error);
-
-
   export const getServiceItemData = async () => {
     try {
       const response = await client.getEntries({
         content_type: "serviceItem",
+        order: "fields.orderNumber",
+
       });
       if (!response || !response.items) {
         throw new Error("No OK About data response");
       }
-       console.log("serviceItem_response:", response);
+    //    console.log("serviceItem_response:", response);
       const dataFields = response.items;
       return dataFields;
     } catch (err) {
