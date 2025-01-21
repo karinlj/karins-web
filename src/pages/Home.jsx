@@ -7,6 +7,8 @@ import AboutMe from "../components/AboutMe";
 import Services from "../components/Services";
 import Cases from "../components/Cases";
 import Process from "../components/Process";
+import ServicesMore from "../components/ServicesMore";
+
 const Home = () => {
 
   //stop the fetch when component using it unmounts
@@ -41,6 +43,7 @@ const Home = () => {
 <Services/>
 <Cases/>
 <Process/>
+<ServicesMore/>
   </main>
   )
 };

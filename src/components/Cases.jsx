@@ -4,6 +4,8 @@ import {
 } from "../karinWeb_api";
 import { useState, useEffect } from "react";
 
+import shiatsu_logo from "../images/shiatsu_logo.png";
+import boozang_logo from "../images/boozang_logo.png";
 const Cases = () => {
   const [caseItems, setCaseItems] = useState([]);
   const [testimonialItems, setTestimonialItems] = useState([]);
@@ -26,9 +28,6 @@ const Cases = () => {
     }
   };
   useEffect(() => {
-    console.log("testimonialItems", testimonialItems);
-    console.log("caseItems", caseItems);
-
     getCaseItemsData();
     getTestimonialItemsData();
     //   return () => {
@@ -53,11 +52,24 @@ const Cases = () => {
                   return (
                     <div className="col-12 col-sm-6" key={index}>
                       <div className="testimonial_item">
-                        <p className="medium_text">{item.fields.quote}</p>
+                        <p className="medium_text">
+                          <span>
+                            {" "}
+                            <i className="fa-solid fa-quote-left"></i>
+                          </span> &nbsp;
+                          {item.fields.quote}
+                          <span>
+                            {" "}
+                            &nbsp; <i className="fa-solid fa-quote-right"></i>
+                          </span>
+                        </p>
+
                         <p className="testimonial_item_name">
                           {item.fields.name}
                         </p>
-                        <p className="large_text">{item.fields.company}</p>
+                        <p className="medium_text">{item.fields.company}</p>
+                        {/* <img src={shiatsu_logo} alt="shiatsu_logo" style={{width: "200px"}}/>
+                        <img src={boozang_logo} alt="boozang_logo" style={{width: "200px"}}/> */}
                       </div>
                     </div>
                   );

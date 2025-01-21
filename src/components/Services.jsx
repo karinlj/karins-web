@@ -95,7 +95,7 @@ const Services = () => {
 
           <div className="link_text">
             {" "}
-            <a href={link} className="services_link">
+            <a href="#sevices_more" className="services_link">
               {linkText}
             </a>
           </div>

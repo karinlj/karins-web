@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { getTopData as getTopData_API } from "../karinWeb_api";
+// import arrow from "../images/arrow_green_2.png";
 import arrow from "../images/arrow_green.png";
+
 
 const TopSection = () => {
   const [topData, setTopData] = useState(null);
@@ -40,7 +42,7 @@ const TopSection = () => {
               <h1 className="heading_1">{title}</h1>
             </div>
             <div className="col-12 col-lg-5">
-              <p className="medium_text right">{description}</p>
+              <p className="medium_text right_align">{description}</p>
               <img src={arrow} alt="arrow" className="arrow_pict" />
               {/* {topData? (
                   <>
