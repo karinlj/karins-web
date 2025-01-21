@@ -46,6 +46,12 @@ const AboutMe = () => {
                 ""
               )}
                 </div>
+                <p className="link_text">
+            Ta en titt på ett urval av mina&nbsp;
+            <a href="#cases" className="projects_link">
+              Projekt
+            </a>
+          </p>
             </div>
             <div className="col-12 col-md-6 col-xl-4">
               <div className="styled_card pict">
@@ -64,12 +70,7 @@ const AboutMe = () => {
               </div>
             </div>
           </div>
-          <p className="link_text">
-            Ta en titt på ett urval av mina&nbsp;
-            <a href="#cases" className="projects_link">
-              Projekt
-            </a>
-          </p>
+    
         </div>
       </section>
     </section>

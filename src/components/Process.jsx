@@ -69,8 +69,8 @@ const Process = () => {
                     return (
                       <div className={`timeline_container ${alignClass}`} key={index}>
                         <div className="timeline_content">
-                          <h3>{item.fields.heading}</h3>
-                          <p>{item.fields.description}</p>
+                          <h4>{item.fields.heading}</h4>
+                          <p className="smaller_text">{item.fields.description}</p>
                         </div>
                       </div>
                     );

@@ -14,11 +14,11 @@ const Footer = () => {
       }}
     >
       {/* <SocialIcons /> */}
-      <h3 className="heading_3">Karin Ljunggren</h3>
+      <h3 className="heading_2">Karin Ljunggren</h3>
       <div className="large_text white"><p>Webbutvecklare</p>
       </div>
         <section className="footer_logo_section">
-          <p>Powered by:</p>
+          <p className="smaller_text">Powered by:</p>
           <div>
             <a href="https://react.dev/">
               <img

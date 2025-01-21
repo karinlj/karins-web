@@ -31,12 +31,7 @@ const Navlinks = ({ clickLink }) => {
           </li>
           <li className="link_item">
             <HashLink to="#cases" onClick={clickLink} className="link">
-              Cases
-            </HashLink>
-          </li>
-          <li className="link_item">
-            <HashLink to="#process" onClick={clickLink} className="link">
-              Arbetsprocess
+              Case
             </HashLink>
           </li>
           <li className="link_item">
