@@ -10,7 +10,7 @@ const Navlinks = ({ clickLink }) => {
     <>
       <div>
         <NavLink to="/" onClick={clickLink} className="logo_link">
-          <img src={logo} alt="logo" className="logo" />
+          <img src={logo} alt="logo" className="logo_karin_web" />
         </NavLink>
       </div>
       <div className="nav_links">

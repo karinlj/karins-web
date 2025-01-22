@@ -16,7 +16,6 @@ const ServicesMore = () => {
   const getSericesMoreItems = async () => {
     try {
       const data = await getSericesMoreItemsData_API();
-      console.log("SericesMoreItems_data", data);
       setSericesMoreItems(data);
     } catch (error) {
       console.error("Error fetching SericesMoreItems items data:", error);

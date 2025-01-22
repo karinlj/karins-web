@@ -3,6 +3,7 @@ import {
   getServicesData as getServicesData_API,
   getServiceItemData as getServiceItemData_API,
 } from "../karinWeb_api";
+import { HashLink } from "react-router-hash-link";
 
 const Services = () => {
   const [servicesData, setServicesData] = useState(null);
@@ -46,7 +47,7 @@ const Services = () => {
     link,
     newsBannerHeading,
     newsBannerText,
-  } = servicesData.fields; 
+  } = servicesData.fields;
 
   return (
     <section className="services_section" id="services">
@@ -74,10 +75,10 @@ const Services = () => {
                                 className=""
                                 style={{ width: "100%", height: "100%" }}
                               />
-                              <h3 className="medium_text">{item.fields.heading}</h3>
-                              <p className="">
-                                {item.fields.description}
-                              </p>
+                              <h3 className="medium_text">
+                                {item.fields.heading}
+                              </h3>
+                              <p className="">{item.fields.description}</p>
                             </div>
                           </div>
                         );
@@ -96,8 +97,12 @@ const Services = () => {
           <div className="link_text">
             {" "}
             <a href="#sevices_more" className="services_link">
+              {" "}
               {linkText}
             </a>
+            {/* <HashLink to="#sevices_more" className="services_link">
+            {linkText}
+            </HashLink> */}
           </div>
         </div>
       </section>

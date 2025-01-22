@@ -75,14 +75,14 @@ inter-page-font {
   font-size: 16px;
   //dark
   &.dark {
-    background: $themecolorBlueDark;
+    background: $themecolorLilaSuperDark;
     .nav_header {
       border-right: 1px solid $textcolor_lighter;
     }
     .top_section,
     .about_me_more_section {
       color-scheme: dark;
-      background: $themecolorBlueDark;
+      background: $themecolorLilaSuperDark;
     }
   }
 }
@@ -96,6 +96,9 @@ ol {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+.logo_karin_web {
+  width: 3rem;
 }
 :focus-visible {
   outline: 4px dotted lightgrey;
@@ -230,6 +233,12 @@ a {
   // &.dark {
   // }
 }
+.smallest_text {
+  font-size: 0.7rem;
+  @media all and (min-width: $mobileM) {
+    font-size: 0.8rem;
+  }
+}
 .smaller_text {
   font-size: 0.9rem;
   @media all and (min-width: $mobileM) {
@@ -251,19 +260,19 @@ a {
   font-weight: 700;
   margin-bottom: 1rem;
   @media all and (min-width: $laptop) {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
   @media all and (min-width: $desktopL) {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
   }
   p {
     font-size: 1.5rem;
     font-weight: 700;
     @media all and (min-width: $laptop) {
-      font-size: 1.7rem;
+      font-size: 1.8rem;
     }
     @media all and (min-width: $desktopL) {
-      font-size: 2.1rem;
+      font-size: 2.2rem;
     }
   }
 }
@@ -597,6 +606,15 @@ a {
   .testimonial_item_name {
     margin-top: 1.5rem;
   }
+  .testimonial_item_company_section {
+    display: flex;
+    align-items: center;
+    img {
+      margin-left: 1rem;
+      max-height: 60px;
+      max-width: 90px;
+    }
+  }
   .medium_text {
     font-weight: 700;
   }
@@ -679,13 +697,15 @@ a {
  accordion
 ***********************/
 .accordion_btn {
-  background: $themecolorPurpleLight;
+  background: $themecolorLilaLightest;
   border: none;
+  // border: 2px solid $themecolorPurple;
   padding: 1rem;
   margin: 0.5rem auto;
   border-radius: $themeBorderRadius;
   width: 100%;
   text-align: left;
+  color: $textcolor_dark;
   .heading {
     cursor: pointer;
     transition: all 0.4s linear;
@@ -694,8 +714,6 @@ a {
     justify-content: space-between;
     h2 {
       font-size: 1.3rem;
-      // font-weight: 700;
-      // margin-bottom: 1rem;
       @media all and (min-width: $laptop) {
         font-size: 1.5rem;
       }
@@ -705,11 +723,11 @@ a {
     }
     .fa-angle-down {
       transition: all 0.3s linear;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       margin: 0 1rem;
       height: 1.1rem;
-      color: $textcolor_dark;
       padding: 2px;
+      color: $themecolorLilaDark;
       &:hover {
         color: $linkcolor;
       }
@@ -723,7 +741,6 @@ a {
     transition: all 0.4s ease-out;
     opacity: 0;
     line-height: 1.5;
-    color: $textcolor_dark;
   }
   &.open {
     .heading {
@@ -855,9 +872,6 @@ a {
   .logo_link {
     display: flex;
     align-items: center;
-  }
-  .logo {
-    width: 3rem;
   }
   .navbar_bigscreen {
     padding: 0.5rem 0;
@@ -1014,7 +1028,7 @@ a {
     z-index: 2000;
     top: 0;
     left: 0;
-    background: $themecolorBlueDark;
+    background: $themecolorLilaSuperDark;
     opacity: 0.95;
     padding: 0 10%;
     padding-top: 20px;
@@ -1115,10 +1129,23 @@ a {
      footer
   *********************/
 .footer_section {
-  background: $themecolorLilaDark;
-  padding: 1rem;
-  min-height: 150px;
+  background: $themecolorLilaSuperDark;
+  // min-height: 800px;
   color: $textcolor_white;
+  padding: 3rem 0 1rem 0;
+  @media all and (min-width: $mobileM) {
+    min-height: 500px;
+    padding: 8rem 0 2rem 0;
+  }
+  @media all and (min-width: $desktopL) {
+    min-height: 700px;
+    padding: 10rem 0 2rem 0;
+  }
+
+
+  .heading_2 {
+    color: $themecolorPurple;
+  }
   .nav_link_list_social {
     flex-direction: row;
     justify-content: flex-start;
@@ -1138,41 +1165,18 @@ a {
       display: none;
     }
   }
-  p {
-    margin-bottom: 0.5rem;
-  }
-  .heading_3 span {
-    display: block;
-    margin-top: 0;
-  }
+
 }
 .footer_bottom_wrapper {
-  margin: 2rem 0 1rem 0;
+  margin: 3rem 0 0.5rem 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  @media all and (min-width: $laptop) {
+    margin: 5rem 0 1rem 0;
+  }
 }
-.back_to_top_link {
-  font-weight: 400;
-  float: right;
-  font-size: 2rem;
-  transition: all 0.3s ease-in;
 
-  @media all and (min-width: $desktop) {
-    font-size: 2.5rem;
-  }
-  &:hover {
-    transform: translateY(-4px);
-    filter: drop-shadow(0 0 3px white);
-  }
-  &:active {
-    transform: translateY(-4px);
-    filter: none;
-  }
-  a {
-    color: $textcolor_white;
-  }
-}
 .footer_logo_section {
   margin-top: 2rem;
   div {
@@ -1188,8 +1192,14 @@ a {
       text-decoration: none;
     }
   }
+  span {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0 0.4rem;
+  }
   img {
     display: inline;
+    padding-top: 0.5rem;
     &.react_logo {
       width: 1.9rem;
       height: auto;
@@ -1201,6 +1211,26 @@ a {
   }
 }
 p.footer_copy {
-  margin-top: 2rem;
-  font-size: 0.8rem;
+  margin-top: 1.5rem;
+}
+.back_to_top_link {
+  font-weight: 400;
+  float: right;
+  font-size: 1.8rem;
+  transition: all 0.3s ease-in;
+
+  @media all and (min-width: $laptop) {
+    font-size: 2.1rem;
+  }
+  &:hover {
+    transform: translateY(-4px);
+    filter: drop-shadow(0 0 3px white);
+  }
+  &:active {
+    transform: translateY(-4px);
+    filter: none;
+  }
+  a {
+    color: $textcolor_white;
+  }
 }

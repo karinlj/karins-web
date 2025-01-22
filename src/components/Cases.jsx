@@ -4,8 +4,6 @@ import {
 } from "../karinWeb_api";
 import { useState, useEffect } from "react";
 
-import shiatsu_logo from "../images/shiatsu_logo.png";
-import boozang_logo from "../images/boozang_logo.png";
 const Cases = () => {
   const [caseItems, setCaseItems] = useState([]);
   const [testimonialItems, setTestimonialItems] = useState([]);
@@ -41,7 +39,7 @@ const Cases = () => {
   return (
     <section className="cases_section" id="cases">
       <div className="container">
-        <h2 className="small_heading">ETT URVAL AV MINA NÖJDA KUNDER</h2>
+        <h2 className="small_heading">ETT URVAL AV MINA kundprojekt</h2>
       </div>
       <section className="content_section">
         <section className="testimonial_items_section">
@@ -56,7 +54,8 @@ const Cases = () => {
                           <span>
                             {" "}
                             <i className="fa-solid fa-quote-left"></i>
-                          </span> &nbsp;
+                          </span>{" "}
+                          &nbsp;
                           {item.fields.quote}
                           <span>
                             {" "}
@@ -67,9 +66,13 @@ const Cases = () => {
                         <p className="testimonial_item_name">
                           {item.fields.name}
                         </p>
-                        <p className="medium_text">{item.fields.company}</p>
-                        {/* <img src={shiatsu_logo} alt="shiatsu_logo" style={{width: "200px"}}/>
-                        <img src={boozang_logo} alt="boozang_logo" style={{width: "200px"}}/> */}
+                        <div className="testimonial_item_company_section">
+                          <p className="medium_text">{item.fields.company}</p>
+                          <img
+                            src={item.fields.companyLogo.fields.file.url}
+                            alt={item.fields.companyLogo.fields.file.title}
+                          />
+                        </div>
                       </div>
                     </div>
                   );

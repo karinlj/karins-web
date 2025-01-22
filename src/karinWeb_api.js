@@ -82,7 +82,7 @@ export const getTestimonialItemsData = async () => {
     if (!response || !response.items) {
       throw new Error("No OK testimonialItems data response");
     }
-    //  console.log("testimonialItems_response:", response);
+      // console.log("testimonialItems_response:", response);
     const dataFields = response.items;
     return dataFields;
   } catch (err) {
@@ -129,7 +129,7 @@ export const getSericesMoreItemsData = async () => {
              throw new Error("No OK SericesMoreItems data response");
     }
 
-    console.log("SericesMoreItems_response:", response);
+    // console.log("SericesMoreItems_response:", response);
     const dataFields = response.items;
     return dataFields;
   } catch (error) {
