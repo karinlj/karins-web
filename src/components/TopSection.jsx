@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getTopData as getTopData_API } from "../karinWeb_api";
 // import arrow from "../images/arrow_green_2.png";
-import arrow from "../images/arrow_green.png";
+import arrow from "../images/arrow_green_3.png";
 
 
 const TopSection = () => {

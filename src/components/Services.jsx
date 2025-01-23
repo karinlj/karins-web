@@ -95,14 +95,9 @@ const Services = () => {
           </section>
 
           <div className="link_text">
-            {" "}
-            <a href="#sevices_more" className="services_link">
-              {" "}
-              {linkText}
-            </a>
-            {/* <HashLink to="#sevices_more" className="services_link">
+            <HashLink to="#services_more" className="section_link">
             {linkText}
-            </HashLink> */}
+            </HashLink>
           </div>
         </div>
       </section>

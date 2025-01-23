@@ -21,9 +21,8 @@ const Footer = () => {
           </a>
         </div>
         <h3 className="heading_2">Karin Ljunggren</h3>
-
         <div className="row justify-content-between">
-          <div className="col-12 col-md-4">
+          <div className="col-12 col-md-6 col-xl-4">
           <p className="large_text white">Webbutvecklare</p>
 
             <p className="medium_text">
@@ -31,15 +30,36 @@ const Footer = () => {
               Hjälper gärna till och drivs av att göra skillnad!{" "}
             </p>
           </div>
-          <div className="col-12 col-md-4">
-            <div className="right_align" id="#contact">
-            <p className="large_text">
-              Kontakta mig så här!
-            </p>
-            <p>email</p>
-            <p>telefon</p>
+
+          <div className="col-12 col-md-6 col-xl-4">
+            <div className="right_align" id="contact">
+              <p className="large_text">
+                {/* Kontakta mig så här! */}
+                {/* Du är välkommen att kontakta mig för mer information och för kostnadsförslag. */}
+                Kontakta mig så här för mer information och för kostnadsförslag.
+              </p>
+              <div className="contact_ways">
+                <p>
+                  <span>
+                    <i className="fa-regular fa-envelope"></i>
+                  </span>
+                  Skriv till mig:{" "}
+                </p>
+                <a href="mailto: kaljunggren@gmail.com" className="section_link">
+                  kaljunggren@gmail.com
+                </a>
+              </div>
+
+              <div className="contact_ways">
+                <p>
+                  <span>
+                    <i className="fa-solid fa-mobile-screen-button"></i>
+                  </span>
+                  Slå en signal:{" "}
+                </p>
+                <a href="tel:+46768514619" className="section_link">0768514619</a>
+              </div>
             </div>
-           
           </div>
         </div>
 

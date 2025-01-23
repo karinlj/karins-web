@@ -180,7 +180,6 @@ h5 {
   position: relative;
   line-height: 1.2;
 }
-
 a {
   color: $linkcolor;
   &.btn_link {
@@ -196,9 +195,14 @@ a {
     font-weight: 600;
   }
 }
-
-.text-right {
-  text-align: right;
+.section_link {
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  color: $linkcolor;
+  transition: all 1s ease;
+  &:hover {
+    filter: drop-shadow(0 0 3px white);
+  }
 }
 .emfasis {
   font-weight: 700;
@@ -220,7 +224,12 @@ a {
   }
 }
 .right_align {
-  text-align: right;
+  margin-top: 4rem;
+  @media all and (min-width: $mobileM) {
+    text-align: right;
+    margin-top: 0;
+
+  }
 }
 .small_heading {
   text-transform: uppercase;
@@ -452,22 +461,11 @@ a {
   .medium_text {
     margin-top: 2rem;
   }
-  // .arrow_pict {
-  //   width: 12rem;
-
-  //   @media all and (min-width: $mobileM) {
-  //     width: 15rem;
-  //     margin-bottom: -10rem;
-  //     margin-left: -3rem;
-  //   }
-  //   @media all and (min-width: $desktopL) {
-  //     width: 18rem;
-  //   }
-  // }
   .arrow_pict {
-    width: 10rem;
+    width: 12rem;
+    margin-left: -3rem;
     @media all and (min-width: $desktopL) {
-      width: 12rem;
+      width: 15rem;
       margin-left: -3rem;
     }
   }
@@ -516,6 +514,11 @@ a {
     top: 0;
     right: 0;
   }
+  .section_link {
+    &:hover {
+      filter: drop-shadow(0 0 3px $linkcolor);
+    }
+  }
   // .me_pict_caption {
   //   color: $textcolor_lighter;
   //   font-size: 1rem;
@@ -524,15 +527,7 @@ a {
   //     font-size: 1.1rem;
   //   }
   // }
-  .projects_link {
-    display: inline-block;
-    padding-bottom: 0.5rem;
-    color: $linkcolor;
-    transition: all 1s ease;
-    &:hover {
-      filter: drop-shadow(0 0 3px white);
-    }
-  }
+
 }
 /**********************
   services_section
@@ -540,19 +535,7 @@ a {
 .services_section {
   background: $themecolorPurple;
   color: $textcolor_white;
-  .services_link {
-    font-size: 1.1rem;
-    display: inline-block;
-    padding-bottom: 0.5rem;
-    color: #fff;
-    transition: all 1s ease;
-    @media all and (min-width: $mobileM) {
-      font-size: 1.3rem;
-    }
-    &:hover {
-      filter: drop-shadow(0 0 3px white);
-    }
-  }
+
   .services_section_description {
     margin-bottom: 3rem;
   }
@@ -581,6 +564,9 @@ a {
   }
   .services_news_banner {
     margin-top: 3rem;
+  }
+  .section_link {
+    color: $textcolor_white;
   }
 }
 
@@ -665,15 +651,27 @@ a {
 .process_section {
   background: $themecolorLilaSuperDark;
   color: $textcolor_white;
+  // .arrow_pict {
+  //   width: 12rem;
+  //   margin-left: 1rem;
+  //   @media all and (min-width: $mobileM) {
+  //     width: 18rem;
+  //     margin-left: 10rem;
+  //   }
+  //   @media all and (min-width: $desktopL) {
+  //     width: rem;
+  //   }
+  // }
+
   .arrow_pict {
     width: 12rem;
-    margin-left: 1rem;
+    margin-top: 3rem;
     @media all and (min-width: $mobileM) {
-      width: 18rem;
-      margin-left: 10rem;
+    margin-left: 14rem;
     }
     @media all and (min-width: $desktopL) {
-      width: 20rem;
+      width: 15rem;
+      margin-left: 16rem;
     }
   }
 }
@@ -1135,46 +1133,35 @@ a {
   padding: 3rem 0 1rem 0;
   @media all and (min-width: $mobileM) {
     min-height: 500px;
-    padding: 8rem 0 2rem 0;
+    padding: 4rem 0 2rem 0;
   }
   @media all and (min-width: $desktopL) {
     min-height: 700px;
-    padding: 10rem 0 2rem 0;
+    padding: 8rem 0 2rem 0;
   }
-
-
   .heading_2 {
     color: $themecolorPurple;
   }
-  .nav_link_list_social {
-    flex-direction: row;
-    justify-content: flex-start;
-    .nav_social_link_item {
-      a.link {
-        color: $textcolor_white;
-        &.active,
-        :visited {
-          color: $textcolor_white;
-        }
+  .contact_ways{
+    margin-bottom: 2rem;
+    .section_link {
+      padding-top: 0.5rem;
+      &:hover {
+        filter: drop-shadow(0 0 3px $linkcolor);
       }
-      &:first-child {
-        margin-left: -1rem;
-      }
-    }
-    @media all and (min-width: $mobileM) {
-      display: none;
     }
   }
-
+  .fa-envelope,.fa-mobile-screen-button{
+    font-size: 1.45rem;
+    margin-right: 0.7rem;
+  }
 }
 .footer_bottom_wrapper {
-  margin: 3rem 0 0.5rem 0;
+  margin: 1rem 0 0.5rem 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  @media all and (min-width: $laptop) {
-    margin: 5rem 0 1rem 0;
-  }
+
 }
 
 .footer_logo_section {
@@ -1212,6 +1199,25 @@ a {
 }
 p.footer_copy {
   margin-top: 1.5rem;
+}
+.nav_link_list_social {
+  flex-direction: row;
+  justify-content: flex-start;
+  .nav_social_link_item {
+    a.link {
+      color: $textcolor_white;
+      &.active,
+      :visited {
+        color: $textcolor_white;
+      }
+    }
+    &:first-child {
+      margin-left: -1rem;
+    }
+  }
+  @media all and (min-width: $mobileM) {
+    display: none;
+  }
 }
 .back_to_top_link {
   font-weight: 400;

@@ -36,9 +36,12 @@ const Navlinks = ({ clickLink }) => {
           </li>
           <li className="link_item">
             <HashLink to="#contact" onClick={clickLink} className="link">
-              Kontakt
+            Kontakt
             </HashLink>
           </li>
+
+
+       
         </ul>
         <div className="social_icons">{/* <SocialIcons /> */}SocialIcons</div>
       </div>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getAboutData as getAboutData_API } from "../karinWeb_api";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { HashLink } from "react-router-hash-link";
 
 const AboutMe = () => {
   const [aboutData, setAboutData] = useState(null);
@@ -32,7 +33,7 @@ const AboutMe = () => {
       <section className="content_section">
         <div className="container">
           <h2 className="small_heading dark">{heading}</h2>
-
+      
           <div className="row justify-content-between">
             <div className="col-12 col-md-6 col-xl-8">
               <div className="large_text">
@@ -46,12 +47,12 @@ const AboutMe = () => {
                 ""
               )}
                 </div>
-                <p className="link_text">
-            Ta en titt på ett urval av mina&nbsp;
-            <a href="#cases" className="projects_link">
-              Projekt
-            </a>
-          </p>
+                     <div className="link_text">
+                     Ta en titt på ett urval av mina&nbsp;
+                            <HashLink to="#cases" className="section_link">
+                            Projekt
+                            </HashLink>
+                          </div>
             </div>
             <div className="col-12 col-md-6 col-xl-4">
               <div className="styled_card pict">
