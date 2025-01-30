@@ -1144,14 +1144,19 @@ a {
   }
   .contact_ways{
     margin-bottom: 2rem;
+    .contact_ways_item{
+      padding-top: 1rem;
+
+    }
     .section_link {
       padding-top: 0.5rem;
+
       &:hover {
         filter: drop-shadow(0 0 3px $linkcolor);
       }
     }
   }
-  .fa-envelope,.fa-mobile-screen-button{
+  .fa-envelope,.fa-mobile-screen-button, .fa-location-dot{
     font-size: 1.45rem;
     margin-right: 0.7rem;
   }
@@ -1165,7 +1170,6 @@ a {
 }
 
 .footer_logo_section {
-  margin-top: 2rem;
   div {
     width: 2rem;
     display: flex;
@@ -1200,25 +1204,7 @@ a {
 p.footer_copy {
   margin-top: 1.5rem;
 }
-.nav_link_list_social {
-  flex-direction: row;
-  justify-content: flex-start;
-  .nav_social_link_item {
-    a.link {
-      color: $textcolor_white;
-      &.active,
-      :visited {
-        color: $textcolor_white;
-      }
-    }
-    &:first-child {
-      margin-left: -1rem;
-    }
-  }
-  @media all and (min-width: $mobileM) {
-    display: none;
-  }
-}
+
 .back_to_top_link {
   font-weight: 400;
   float: right;
@@ -1240,3 +1226,37 @@ p.footer_copy {
     color: $textcolor_white;
   }
 }
+
+.nav_link_list_social {
+display: flex;
+justify-content: flex-end;
+  .nav_social_link_item {
+    a.link {
+      color: $textcolor_white;
+      &.active,
+      :visited {
+        color: $textcolor_white;
+      }
+    }
+    &:first-child {
+      margin-left: -1rem;
+    }
+  }
+}
+
+li.nav_social_link_item {
+  .link_icon{
+    font-size: 1.8rem;
+    margin-left: 1rem;
+  }
+  margin-bottom: 0.3rem;
+  a.link {
+    color: $linkcolor;
+    &.active,
+    :visited {
+      color: $linkcolor;
+    }
+  }
+
+}
+

@@ -1,9 +1,9 @@
 // import SocialIcons from "../SocialIcons";
 import react_logo from "../../images/react_logo.png";
 import contentful_logo from "../../images/contentful_logo.png";
-import { Link } from "react-router-dom";
-
 import logo from "../../images/K._dark.png";
+import SocialIcons from "../SocialIcons";
+import Contact from "../Contact";
 
 const Footer = () => {
   return (
@@ -38,28 +38,9 @@ const Footer = () => {
                 {/* Du är välkommen att kontakta mig för mer information och för kostnadsförslag. */}
                 Kontakta mig så här för mer information och för kostnadsförslag.
               </p>
-              <div className="contact_ways">
-                <p>
-                  <span>
-                    <i className="fa-regular fa-envelope"></i>
-                  </span>
-                  Skriv till mig:{" "}
-                </p>
-                <a href="mailto: kaljunggren@gmail.com" className="section_link">
-                  kaljunggren@gmail.com
-                </a>
-              </div>
-
-              <div className="contact_ways">
-                <p>
-                  <span>
-                    <i className="fa-solid fa-mobile-screen-button"></i>
-                  </span>
-                  Slå en signal:{" "}
-                </p>
-                <a href="tel:+46768514619" className="section_link">0768514619</a>
-              </div>
+              <Contact/>
             </div>
+            <SocialIcons/>
           </div>
         </div>
 
