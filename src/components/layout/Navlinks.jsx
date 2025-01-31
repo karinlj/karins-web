@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
+import SocialIcons from "../SocialIcons";
 
 // import SocialIcons from "../SocialIcons";
 import logo from "../../images/K._white.png";
@@ -39,11 +40,10 @@ const Navlinks = ({ clickLink }) => {
             Kontakt
             </HashLink>
           </li>
-
-
-       
         </ul>
-        <div className="social_icons">{/* <SocialIcons /> */}SocialIcons</div>
+        <div className="social_icons">
+        <SocialIcons/>
+        </div>
       </div>
     </>
   );

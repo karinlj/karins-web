@@ -19,10 +19,10 @@ const SocialIcons = () => {
       ];
 
     return (     
-    <ul className="nav_link_list_social">
+    <ul className="social_link_list">
         {iconList.map((item, index) => {
           return (
-            <li className="nav_social_link_item" key={index}>
+            <li className="social_link_list_item" key={index}>
               <a
                 href={item.url}
                 target="_top"
