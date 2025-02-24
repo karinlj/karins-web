@@ -1,19 +1,14 @@
 /* eslint-disable react/prop-types */
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import SocialIcons from "../SocialIcons";
 
 // import SocialIcons from "../SocialIcons";
-import logo from "../../images/K._white.png";
+// import logo from "../../images/K._white.png";
 
 const Navlinks = ({ clickLink }) => {
   return (
     <>
-      <div>
-        <NavLink to="/" onClick={clickLink} className="logo_link">
-          <img src={logo} alt="logo" className="logo_karin_web" />
-        </NavLink>
-      </div>
       <div className="nav_links">
         <ul className="nav_links_list">
           <li className="link_item">

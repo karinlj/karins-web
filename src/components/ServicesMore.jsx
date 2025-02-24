@@ -35,16 +35,13 @@ const ServicesMore = () => {
   return (
     <section className="services_more_section" id="services_more">
       <div className="container">
-        <h2 className="small_heading">Mer om mina tjänster</h2>
+        <h2 className="small_heading text-center">Mer om mina tjänster</h2>
       </div>
-      <section className="content_section">
+      <section className="accordion_content_section">
         <div className="container">
         <div className="row">
-        {/* <div className="col-12 col-md-10 offset-md-2"> */}
-        <div className="col-12 col-md-8">
-
+        <div className="col-12 col-md-10 offset-md-1">
           {/* item */}
-
           {sericesMoreItems &&
             sericesMoreItems.map((item, index) => {
               return (
@@ -59,22 +56,11 @@ const ServicesMore = () => {
                     <h2 className="">{item.fields.heading}</h2>
                     <i className="fa-solid fa-angle-down"></i>
                   </div>
-                  <p className="cv_content medium_text">{item.fields.description}</p>
+                  <p className="accordion_content medium_text">{item.fields.description}</p>
                 </button>
               );
             })}
 
-          {/* <button
-            className="accordion_btn"
-            onClick={toggleAccordion}
-            aria-label="Service content"
-            aria-expanded={openAccordion ? "true" : "false"}
-          >
-            <div className="heading">
-              <h4 className="accordion_heading">{heading}</h4>
-            </div>
-            <p className="cv_content">{description}</p>
-          </button> */}
         </div>
         </div>
         </div>

@@ -1,6 +1,6 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const SocialIcons = () => {
     const iconList = [
@@ -9,13 +9,8 @@ const SocialIcons = () => {
           icon: faLinkedin,
           ariaLabel: "Karin Ljunggren Linkedin",
           text: "Linkedin",
-        },
-        {
-          url: "https://www.facebook.com/profile.php?id=100006940382615",
-          icon: faFacebookSquare,
-          ariaLabel: "Karin Ljunggren Facebook",
-          text: "Facebook",
-        },
+        }
+
       ];
 
     return (     

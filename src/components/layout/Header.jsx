@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import Navlinks from "./Navlinks";
+import { NavLink } from "react-router-dom";
 import ToggleBtn from "../../components/ToggleBtn";
+import logo from "../../images/K._white.png";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -29,12 +31,22 @@ const Header = () => {
   return (
     <header className="nav_header" id="nav">
       <div className="container">
-        <div className="row">
+        <div className="row justify-content-between align-items-center">
           <div className="col">
+              <NavLink to="/" onClick={clickLink} className="logo_link">
+                <img src={logo} alt="logo" className="logo_karin_web" />
+              </NavLink>
+            </div>
+         
+        
+            <div className="col col-md-8">  
             <nav className="navbar_bigscreen">
               <Navlinks />
-              <ToggleBtn toggleMenu={toggleMenu} mobileOpen={mobileOpen} />
             </nav>
+            <ToggleBtn toggleMenu={toggleMenu} mobileOpen={mobileOpen} />
+
+              </div>
+
             <nav
               className={`navbar_mobile ${
                 mobileOpen ? "navbar_mobile_open" : ""
@@ -42,7 +54,7 @@ const Header = () => {
             >
               <Navlinks clickLink={clickLink} />
             </nav>
-          </div>
+       
         </div>
       </div>
     </header>

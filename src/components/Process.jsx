@@ -55,7 +55,7 @@ const Process = () => {
               <img src={arrow} alt="arrow pict" className="arrow_pict" />
             </div>
 
-            <div className="col-12 col-md-6">
+            <div className="col-12 col-lg-6">
               {/* timeline */}
               <div className="timeline">
                 {timelineItems &&

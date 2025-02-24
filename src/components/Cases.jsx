@@ -67,11 +67,11 @@ const Cases = () => {
                           {item.fields.name}
                         </p>
                         <div className="testimonial_item_company_section">
-                          <p className="medium_text">{item.fields.company}</p>
                           <img
                             src={item.fields.companyLogo.fields.file.url}
                             alt={item.fields.companyLogo.fields.file.title}
                           />
+                          <p className="medium_text">{item.fields.company}</p>
                         </div>
                       </div>
                     </div>
@@ -86,7 +86,7 @@ const Cases = () => {
               {caseItems &&
                 caseItems.map((item, index) => {
                   return (
-                    <div className="col-12 col-sm-4" key={index}>
+                    <div className="col-12 col-md-4" key={index}>
                       <div className="styled_card">
                         <a
                           href={item.fields.link}
