@@ -13,7 +13,7 @@ const Contact = () => {
               },
             {
               url: "mailto: kaljunggren@gmail.com",
-              urlText: "kaljunggren@gmail.com",
+              urlText: "kaljunggren.frilans@gmail.com",
               icon: faEnvelope,
               ariaLabel: "Karin Ljunggren email",
               text: "Skriv till mig",
@@ -26,8 +26,6 @@ const Contact = () => {
               text: "Slå en signal",
             },
           ];
-
-
 
     return (      
     <ul className="contact_ways">

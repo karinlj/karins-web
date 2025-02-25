@@ -1,73 +1,5 @@
-$xs-max: 480px;
-$sm-min: 576px;
-
-$sm-max: 767.9px;
-$md-min: 768px;
-
-$md-max: 991.9px;
-$lg-min: 992px;
-
-$lg-max: 1199.9px;
-$xl-min: 1200px;
-
-$xl-max: 1309px;
-
-// //sizes
-// $mobileXS: 480px;
-// $mobileS: 576px;
-// $mobileM: 768px;
-// $laptop: 992px;
-// $laptopL: 1200px;
-// $desktop: 1400px;
-// $desktopL: 1600px;
-
-// //portfolio-project
-// //bg
-
-// $themecolorLila: #C473C1;
-// $themecolorLilaLight: #8E8BD8;
-// $themecolorLilaDark: #5C5CA8;
-
-// $themecolorBlue: #0063cc; // #0052b6; // #044395;
-// $themecolorBlueDarker: #004db3;
-// $themecolorBlueDark:   #000c1a;   //#010b19;
-
-// $background_darkgrey: #1a1a1a;
-// $background_light: #f9f9f9;
-// //text
-// $textcolor_white: #fff;
-// // $textcolor_dark: #000c1a;
-// $textcolor_dark: #111;
-// $textcolor_lighter: #003066;
-// //other
-// $lightgray: #eee;
-// $turqoise_light: #b3ffff;
-// $turqoise_medium: #00e6e6;
-// $turqoise_dark: #00A3A3;
-// $lilacPastel: #daa6f2;
-// $bluecolor: #2e9ce6;
-// $themecolorPink: #FFB8F1;
-// $orange: #f68c70;
-// $pink_lightest: #fcd9cf;
-
-// $linkcolor: $themecolorPink;
-// $navcolor: #111;
-
-// $themeBorderRadius: 20px;
-// $themeBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.8);
-// $themeBoxShadowLight: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
-
-// $small_text: 0.8rem;
-
-inter-page-font {
-  font-family: "Inter", serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-}
-
-//portfolio-project
-@import "./variables.scss";
+@use "variables" as vars;
+// @import "./variables.scss";
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -75,14 +7,20 @@ inter-page-font {
   font-size: 16px;
   //dark
   &.dark {
-    background: $themecolorLilaSuperDark;
+    background: vars.$themecolorLilaSuperDark;
     .nav_header {
-      border-right: 1px solid $textcolor_lighter;
+      border-right: 1px solid vars.$textcolor_lighter;
     }
     .top_section,
-    .about_me_more_section {
+    .about_me_section,
+    .cases_section,
+    .process_section,
+    .services_section,
+    .services_more_section,
+    .footer_section,
+    .nav_header {
       color-scheme: dark;
-      background: $themecolorLilaSuperDark;
+      background: vars.$themecolorLilaSuperDark;
     }
   }
 }
@@ -113,7 +51,7 @@ html {
 }
 body {
   position: relative;
-  color: $textcolor_dark;
+  color: vars.$textcolor_dark;
   font-weight: 400;
   transition: all 0.2s linear;
 }
@@ -142,11 +80,11 @@ section .top_section,
 .services_more_section {
   min-height: 400px;
   padding: 6rem 0;
-  @media all and (min-width: $mobileM) {
+  @media all and (min-width: vars.$mobileM) {
     min-height: 500px;
     padding: 8rem 0;
   }
-  @media all and (min-width: $desktopL) {
+  @media all and (min-width: vars.$desktopL) {
     min-height: 700px;
     padding: 10rem 0;
   }
@@ -168,7 +106,7 @@ li {
   font-size: 1.1rem;
   // line-height: 1.6;
   font-weight: 400;
-  // @media all and (min-width: $desktopL) {
+  // @media all and (min-width: vars.$desktopL) {
   //   font-size: 1.3rem;
   // }
 }
@@ -182,51 +120,51 @@ h5 {
 }
 //links
 a {
-  color: $linkcolor;
+  color: vars.$linkcolor;
   &.btn_link {
     text-decoration: none;
     display: inline-block;
-    color: $textcolor_white;
-    background: $themecolorLilaSuperDark;
+    color: vars.$textcolor_white;
+    background: vars.$themecolorLilaSuperDark;
     padding: 0.7rem 1.5rem 0.8rem 1.5rem;
-    border-radius: $themeBorderRadius;
+    border-radius: vars.$themeBorderRadius;
     margin-top: 1.5rem;
     min-width: 7rem;
     text-align: center;
     font-weight: 600;
     &:hover {
-      filter: drop-shadow(0 0 3px $textcolor_white);
+      filter: drop-shadow(0 0 3px vars.$textcolor_white);
     }
   }
   &:hover {
-    filter: drop-shadow(0 0 3px $linkcolor);
+    filter: drop-shadow(0 0 3px vars.$linkcolor);
   }
 }
 .section_link {
   display: inline-block;
   padding-bottom: 0.5rem;
-  color: $linkcolor;
+  color: vars.$linkcolor;
   transition: all 1s ease;
   &:hover {
-    filter: drop-shadow(0 0 3px $textcolor_white);
+    filter: drop-shadow(0 0 3px vars.$textcolor_white);
   }
 }
 .loading {
   padding: 1rem;
-  color: $lilacPastel;
+  color: vars.$lilacPastel;
 }
 //fonts - styles and sizes
 .content_section {
   &.white {
-    color: $textcolor_white;
+    color: vars.$textcolor_white;
   }
   &.dark {
-    color: $textcolor_dark;
+    color: vars.$textcolor_dark;
   }
 }
 .right_align {
   margin-top: 2rem;
-  @media all and (min-width: $desktop) {
+  @media all and (min-width: vars.$desktop) {
     text-align: right;
     margin-top: 0;
   }
@@ -236,7 +174,7 @@ a {
   margin-bottom: 2rem;
   // padding-top: 6rem;
   font-size: 1.1rem;
-  @media all and (min-width: $mobileM) {
+  @media all and (min-width: vars.$mobileM) {
     font-size: 1.3rem;
   }
   // &.dark {
@@ -244,23 +182,23 @@ a {
 }
 .smallest_text {
   font-size: 0.7rem;
-  @media all and (min-width: $mobileM) {
+  @media all and (min-width: vars.$mobileM) {
     font-size: 0.8rem;
   }
 }
 .smaller_text {
   font-size: 0.9rem;
-  @media all and (min-width: $mobileM) {
+  @media all and (min-width: vars.$mobileM) {
     font-size: 1rem;
   }
 }
 .medium_text {
   font-size: 1.2rem;
-  @media all and (min-width: $laptopL) {
+  @media all and (min-width: vars.$laptopL) {
     font-size: 1.4rem;
   }
   &.dark {
-    color: $textcolor_dark;
+    color: vars.$textcolor_dark;
   }
 }
 
@@ -268,43 +206,43 @@ a {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  @media all and (min-width: $laptop) {
+  @media all and (min-width: vars.$laptop) {
     font-size: 1.8rem;
   }
-  @media all and (min-width: $desktopL) {
+  @media all and (min-width: vars.$desktopL) {
     font-size: 2.2rem;
   }
   p {
     font-size: 1.5rem;
     font-weight: 700;
-    @media all and (min-width: $laptop) {
+    @media all and (min-width: vars.$laptop) {
       font-size: 1.8rem;
     }
-    @media all and (min-width: $desktopL) {
+    @media all and (min-width: vars.$desktopL) {
       font-size: 2.2rem;
     }
   }
 }
 .heading_1 {
   margin-bottom: 0.1rem;
-  color: $textcolor_white;
+  color: vars.$textcolor_white;
   font-size: 2.3rem;
   font-weight: 900;
   line-height: 1.1;
-  @media all and (min-width: $mobileS) {
+  @media all and (min-width: vars.$mobileS) {
     font-size: 3.8rem;
   }
-  @media all and (min-width: $mobileM) {
+  @media all and (min-width: vars.$mobileM) {
     font-size: 4rem;
   }
-  @media all and (min-width: $laptop) {
+  @media all and (min-width: vars.$laptop) {
     font-size: 5rem;
   }
-  @media all and (min-width: $laptopL) {
+  @media all and (min-width: vars.$laptopL) {
     font-size: 6.5rem;
   }
   &.dark {
-    color: $textcolor_dark;
+    color: vars.$textcolor_dark;
   }
   &.upper {
     text-transform: uppercase;
@@ -312,22 +250,21 @@ a {
 }
 
 .heading_2 {
-  // color: $textcolor_white;
   font-size: 1.8rem;
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 1rem;
 
-  @media all and (min-width: $mobileS) {
+  @media all and (min-width: vars.$mobileS) {
     font-size: 2rem;
   }
-  @media all and (min-width: $mobileM) {
+  @media all and (min-width: vars.$mobileM) {
     font-size: 2.2rem;
   }
-  @media all and (min-width: $laptop) {
+  @media all and (min-width: vars.$laptop) {
     font-size: 3rem;
   }
-  @media all and (min-width: $laptopL) {
+  @media all and (min-width: vars.$laptopL) {
     font-size: 4.5rem;
   }
 }
@@ -336,7 +273,7 @@ a {
   font-size: 1.1rem;
   font-weight: 700;
   margin-top: 2rem;
-  @media all and (min-width: $mobileM) {
+  @media all and (min-width: vars.$mobileM) {
     font-size: 1.2rem;
   }
 }
@@ -345,24 +282,13 @@ a {
   justify-content: flex-end;
   margin-top: 3rem;
   a {
-    // color: $textcolor_white;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 600;
     position: relative;
   }
 }
-// section {
-//   p {
-//     font-size: 1rem;
-//     line-height: 1.4;
-//   }
-//   h2,
-//   h3,
-//   h4 {
-//     margin-bottom: 1.3rem;
-//   }
-// }
+
 .container {
   max-width: 1100px;
   width: 100%;
@@ -373,70 +299,31 @@ a {
   }
 }
 
-//HOME
-.home_wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-//image wrapper
-// .cover_image_wrapper {
-//   position: relative;
-//   border-radius: $themeBorderRadius;
-//   border-radius: 30px;
-
-//   min-height: 900px;
-//   padding-bottom: 10rem;
-//   margin-bottom: 5rem;
-//   display: flex;
-//   flex-direction: column;
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   padding-left: 8rem;
-//   margin: 30px 0;
-
-//   @media all and (min-width: $mobileM) {
-//     padding: 3.5rem 3.5rem 1rem 3.5rem;
-//   }
-//   &::before {
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     left: 0;
-//     background: rgba(0, 0, 0, 0.4);
-//     content: "";
-//     display: block;
-//     border-radius: 30px;
-//   }
-// }
 /**********************
   styled_card
 ***********************/
 .styled_card {
-  background: $background_beige;
-  color: $themecolorLilaSuperDark;
+  background: vars.$background_beige;
+  color: vars.$themecolorLilaSuperDark;
   padding: 1rem 1rem 5rem 1rem;
   margin-bottom: 1.5rem;
   border-radius: 25px;
   //clamp(minimum, preferred, maximum);
   min-height: 380px;
   height: clamp(20rem, 25rem, 30rem);
-  box-shadow: $themeBoxShadowLight;
-  @media all and (min-width: $mobileS) {
+  box-shadow: vars.$themeBoxShadowLight;
+  @media all and (min-width: vars.$mobileS) {
     height: clamp(30rem, 40rem, 45rem);
     padding: 1rem 1rem 7rem 1rem;
   }
-  @media all and (min-width: $mobileM) {
+  @media all and (min-width: vars.$mobileM) {
     padding: 0.5rem 0.5rem 3.5rem 0.5rem;
     height: auto;
   }
-  @media all and (min-width: $laptop) {
+  @media all and (min-width: vars.$laptop) {
     padding: 0.7rem 0.7rem 5rem 0.7rem;
   }
-  @media all and (min-width: $laptopL) {
+  @media all and (min-width: vars.$laptopL) {
     padding: 1rem 1rem 7rem 1rem;
   }
   img {
@@ -453,14 +340,14 @@ a {
 .top_section {
   height: 40rem;
   padding-top: 5rem;
-  background: $themecolorLilaDark;
+  background: vars.$themecolorLilaDark;
   .small_heading {
     padding-top: 0;
     margin-bottom: 0.5rem;
   }
   .medium_text {
     margin-top: 2rem;
-    @media all and (min-width: $laptop) {
+    @media all and (min-width: vars.$laptop) {
       margin-top: 4rem;
     }
   }
@@ -469,16 +356,16 @@ a {
     padding: 1rem;
     width: 11rem;
     margin-left: 3rem;
-    @media all and (min-width: $mobileM) {
+    @media all and (min-width: vars.$mobileM) {
       padding: 2rem 1rem;
       width: 13rem;
       margin-left: 3rem;
     }
-    @media all and (min-width: $laptop) {
+    @media all and (min-width: vars.$laptop) {
       width: 14rem;
       margin-left: -3rem;
     }
-    @media all and (min-width: $desktopL) {
+    @media all and (min-width: vars.$desktopL) {
       width: 15rem;
     }
   }
@@ -500,7 +387,7 @@ a {
   // .content_section {
   //   .row {
   //     flex-direction: column-reverse;
-  //     @media all and (min-width: $laptop) {
+  //     @media all and (min-width: vars.$laptop) {
   //       flex-direction: row;
   //     }
   //   }
@@ -510,14 +397,14 @@ a {
     padding: 1rem 0;
   }
   .styled_card.pict {
-    @media all and (min-width: $mobileS) {
+    @media all and (min-width: vars.$mobileS) {
       height: clamp(30rem, 35rem, 40rem);
       padding: 1rem 1rem 7rem 1rem;
     }
-    @media all and (min-width: $mobileM) {
+    @media all and (min-width: vars.$mobileM) {
       padding: 1rem 1rem 7rem 1rem;
     }
-    @media all and (min-width: $laptop) {
+    @media all and (min-width: vars.$laptop) {
       margin-top: 0;
       height: clamp(25rem, 30rem, 35rem);
       padding: 1rem 1rem 7rem 1rem;
@@ -529,14 +416,14 @@ a {
   }
   .section_link {
     &:hover {
-      filter: drop-shadow(0 0 3px $linkcolor);
+      filter: drop-shadow(0 0 3px vars.$linkcolor);
     }
   }
   // .me_pict_caption {
-  //   color: $textcolor_lighter;
+  //   color: vars.$textcolor_lighter;
   //   font-size: 1rem;
   //   margin-top: 1rem;
-  //   @media all and (min-width: $laptop) {
+  //   @media all and (min-width: vars.$laptop) {
   //     font-size: 1.1rem;
   //   }
   // }
@@ -545,8 +432,8 @@ a {
   services_section
 ***********************/
 .services_section {
-  background: $themecolorPurple;
-  color: $textcolor_white;
+  background: vars.$themecolorPurple;
+  color: vars.$textcolor_white;
 
   .services_section_description {
     margin-bottom: 3rem;
@@ -556,13 +443,13 @@ a {
     padding: 1rem 1rem 2rem 1rem;
     height: auto;
     margin-bottom: 4rem;
-    @media all and (min-width: $mobileS) {
+    @media all and (min-width: vars.$mobileS) {
       margin-bottom: 1.5rem;
     }
-    // @media all and (min-width: $mobileM) {
+    // @media all and (min-width: vars.$mobileM) {
     //   padding: 0.5rem 0.5rem 2rem 0.5rem;
     // }
-    // @media all and (min-width: $laptop) {
+    // @media all and (min-width: vars.$laptop) {
     //   padding: 1rem 1rem 2rem 1rem;
     // }
 
@@ -576,7 +463,7 @@ a {
     margin-top: 3rem;
   }
   .section_link {
-    color: $textcolor_white;
+    color: vars.$textcolor_white;
   }
 }
 
@@ -609,7 +496,7 @@ a {
       margin: 0.5rem 0.5rem 0 0;
       max-height: 50px;
       max-width: 50px;
-      @media all and (min-width: $desktop) {
+      @media all and (min-width: vars.$desktop) {
         max-height: 60px;
         max-width: 90px;
       }
@@ -626,15 +513,15 @@ a {
     margin-bottom: 4rem;
     &:hover {
       transform: translateY(-4px);
-      color: $themecolorPurple;
+      color: vars.$themecolorPurple;
       p {
         text-decoration: underline;
       }
     }
-    @media all and (min-width: $mobileM) {
+    @media all and (min-width: vars.$mobileM) {
       padding: 0.5rem 0.5rem 2rem 0.5rem;
     }
-    @media all and (min-width: $laptop) {
+    @media all and (min-width: vars.$laptop) {
       padding: 1rem 1rem 2rem 1rem;
     }
   }
@@ -650,7 +537,7 @@ a {
   }
   .case_item_heading {
     text-transform: uppercase;
-    color: $themecolorPurple;
+    color: vars.$themecolorPurple;
     margin-bottom: 1rem;
   }
 }
@@ -658,26 +545,26 @@ a {
  process_section
 ***********************/
 .process_section {
-  background: $themecolorLilaSuperDark;
-  color: $textcolor_white;
+  background: vars.$themecolorLilaSuperDark;
+  color: vars.$textcolor_white;
 
   .arrow_pict {
     padding: 1rem;
     width: 11rem;
-    @media all and (min-width: $mobileM) {
+    @media all and (min-width: vars.$mobileM) {
       padding: 2rem 1rem;
       margin-left: 3rem;
       width: 13rem;
     }
-    @media all and (min-width: $laptop) {
+    @media all and (min-width: vars.$laptop) {
       width: 14rem;
       margin-left: 10rem;
     }
-    @media all and (min-width: $desktop) {
+    @media all and (min-width: vars.$desktop) {
       width: 15rem;
       margin-left: 14rem;
     }
-    @media all and (min-width: $desktopL) {
+    @media all and (min-width: vars.$desktopL) {
       width: 16rem;
       margin-left: 16rem;
     }
@@ -685,7 +572,7 @@ a {
 
   .timeline {
     margin-top: 2rem;
-    @media all and (min-width: $desktop) {
+    @media all and (min-width: vars.$desktop) {
       margin-top: 0;
     }
   }
@@ -713,15 +600,14 @@ a {
  accordion
 ***********************/
 .accordion_btn {
-  background: $themecolorLilaLightest;
+  background: vars.$themecolorLilaLightest;
   border: none;
-  // border: 2px solid $themecolorPurple;
   padding: 1rem;
   margin: 0.5rem auto;
-  border-radius: $themeBorderRadius;
+  border-radius: vars.$themeBorderRadius;
   width: 100%;
   text-align: left;
-  color: $textcolor_dark;
+  color: vars.$textcolor_dark;
   .heading {
     cursor: pointer;
     transition: all 0.4s linear;
@@ -730,10 +616,10 @@ a {
     justify-content: space-between;
     h2 {
       font-size: 1.3rem;
-      @media all and (min-width: $laptop) {
+      @media all and (min-width: vars.$laptop) {
         font-size: 1.5rem;
       }
-      @media all and (min-width: $desktopL) {
+      @media all and (min-width: vars.$desktopL) {
         font-size: 1.8rem;
       }
     }
@@ -743,9 +629,9 @@ a {
       margin: 0 1rem;
       height: 1.1rem;
       padding: 2px;
-      color: $themecolorLilaDark;
+      color: vars.$themecolorLilaDark;
       &:hover {
-        color: $linkcolor;
+        color: vars.$linkcolor;
       }
     }
   }
@@ -782,7 +668,6 @@ a {
   max-width: 700px;
   margin: 0 auto;
 }
-
 /* The actual timeline (the vertical ruler) */
 .timeline::after {
   content: "";
@@ -794,7 +679,6 @@ a {
   left: 50%;
   margin-left: -3px;
 }
-
 /* Container around content */
 .timeline_container {
   // padding: 10px 30px;
@@ -808,7 +692,6 @@ a {
     padding-bottom: 1rem;
   }
 }
-
 /* The circles on the timeline */
 .timeline_container::after {
   content: "";
@@ -816,8 +699,8 @@ a {
   width: 25px;
   height: 25px;
   right: -12px; //-17px;
-  background: $themecolorLilaDark;
-  border: 4px solid $themecolorPurple;
+  background: vars.$themecolorLilaDark;
+  border: 4px solid vars.$themecolorPurple;
   top: 15px;
   border-radius: 50%;
   z-index: 1;
@@ -837,29 +720,26 @@ a {
 /* The actual content */
 .timeline_content {
   padding: 1rem 1.5rem;
-  border: 3px dotted $themecolorLilaDark;
+  border: 3px dotted vars.$themecolorLilaDark;
   position: relative;
-  border-radius: $themeBorderRadius;
+  border-radius: vars.$themeBorderRadius;
   h4 {
     margin-bottom: 0.5rem;
     text-transform: uppercase;
   }
 }
-
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
   /* Place the timelime to the left */
   .timeline::after {
     left: 31px;
   }
-
   /* Full-width containers */
   .timeline_container {
     width: 100%;
     padding-left: 70px;
     padding-right: 25px;
   }
-
   .timeline_content {
     margin-bottom: 1rem;
   }
@@ -870,13 +750,11 @@ a {
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
   }
-
   /* Make sure all circles are at the same spot */
   .left::after,
   .right::after {
     left: 15px;
   }
-
   /* Make all right containers behave like the left ones */
   .right {
     left: 0%;
@@ -886,7 +764,7 @@ a {
    header and nav
 ***********************/
 .nav_header {
-  background: $themecolorLilaDark;
+  background: vars.$themecolorLilaDark;
   width: 100%;
   z-index: 100;
   padding: 1rem 0;
@@ -900,7 +778,7 @@ a {
     flex-direction: column;
     width: 100%;
     padding-top: 5rem;
-    @media all and (min-width: $mobileM) {
+    @media all and (min-width: vars.$mobileM) {
       justify-content: end;
       flex-direction: row;
       padding: 0;
@@ -911,7 +789,7 @@ a {
       line-height: 1.6;
       display: none;
       border-radius: 3px;
-      @media all and (min-width: $mobileM) {
+      @media all and (min-width: vars.$mobileM) {
         display: flex;
         align-items: center;
       }
@@ -923,21 +801,21 @@ a {
           padding: 0.5rem 0.2rem;
           border-bottom: 1px solid transparent;
           display: block;
-          color: $navcolor;
+          color: vars.$navcolor;
           text-decoration: none;
           font-weight: 600;
           cursor: pointer;
           &:hover {
-            color: $navcolor;
-            border-bottom: 2px solid $linkcolor;
+            color: vars.$navcolor;
+            border-bottom: 2px solid vars.$linkcolor;
             opacity: 1;
           }
           &.active,
           :visited {
-            color: $navcolor;
+            color: vars.$navcolor;
           }
           &.active {
-            border-bottom: 2px solid $linkcolor;
+            border-bottom: 2px solid vars.$linkcolor;
           }
         }
       }
@@ -946,14 +824,14 @@ a {
     .social_icons {
       padding: 0.8rem 0.2rem;
       display: none;
-      @media all and (min-width: $mobileM) {
+      @media all and (min-width: vars.$mobileM) {
         display: flex;
         justify-content: flex-end;
       }
     }
     .social_link_list_item {
       a.link {
-        color: $greenVibrant;
+        color: vars.$greenVibrant;
       }
     }
   }
@@ -970,15 +848,15 @@ a {
     align-items: center;
     justify-content: center;
     border: none;
-    border-radius: calc($themeBorderRadius/2);
+    border-radius: calc(vars.$themeBorderRadius/2);
     /* Hamburger Line */
     > div {
       position: relative;
       flex: none;
       width: 100%;
       height: 3px;
-      border-radius: $themeBorderRadius;
-      background: $greenVibrant;
+      border-radius: vars.$themeBorderRadius;
+      background: vars.$greenVibrant;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -992,7 +870,7 @@ a {
         width: 100%;
         height: 3px;
         background: inherit;
-        border-radius: $themeBorderRadius;
+        border-radius: vars.$themeBorderRadius;
       }
       /* Moves Line Down */
       &::after {
@@ -1004,11 +882,11 @@ a {
         height: 3px;
         background: inherit;
         top: 10px;
-        border-radius: $themeBorderRadius;
+        border-radius: vars.$themeBorderRadius;
       }
     }
     //hide veggoburger
-    @media all and (min-width: $mobileM) {
+    @media all and (min-width: vars.$mobileM) {
       display: none;
     }
     //clicked veggoburger
@@ -1041,7 +919,7 @@ a {
     display: none;
     flex-wrap: nowrap;
     align-items: center;
-    @media all and (min-width: $mobileM) {
+    @media all and (min-width: vars.$mobileM) {
       display: flex;
     }
   }
@@ -1051,7 +929,7 @@ a {
     top: 0;
     left: 0;
     z-index: 100;
-    background: $themecolorLilaSuperDark;
+    background: vars.$themecolorLilaSuperDark;
     padding: 0 10%;
     padding-top: 20px;
     text-align: left;
@@ -1089,13 +967,12 @@ a {
 
       animation: transitionIn 800ms cubic-bezier(0.39, 0.575, 0.565, 1) both;
       pointer-events: all;
-      @media all and (min-width: $mobileM) {
+      @media all and (min-width: vars.$mobileM) {
         display: none;
       }
     }
   }
 }
-
 /*********************
      social icons
   *********************/
@@ -1106,7 +983,7 @@ a {
   width: 100%;
   padding-top: 2rem;
 
-  @media all and (min-width: $laptop) {
+  @media all and (min-width: vars.$laptop) {
     padding-top: 0;
     flex-direction: row !important;
     align-items: center;
@@ -1117,7 +994,7 @@ a {
       padding-left: 0;
     }
     a {
-      color: $linkcolor;
+      color: vars.$linkcolor;
       font-size: 0.9em;
       &:hover {
         filter: brightness(85%);
@@ -1137,8 +1014,8 @@ a {
       text-align: center;
       text-decoration: none;
       transition: 1s;
-      color: $linkcolor;
-      @media all and (min-width: $laptop) {
+      color: vars.$linkcolor;
+      @media all and (min-width: vars.$laptop) {
         margin: 0 0.4rem;
         padding: 8px;
         padding-bottom: 0;
@@ -1146,30 +1023,56 @@ a {
     }
   }
 }
-
+/*********************
+     social_link_list
+  *********************/
+.social_link_list {
+  display: flex;
+  justify-content: flex-end;
+  .fa-envelope,
+  .fa-mobile-screen-button,
+  .fa-location-dot {
+    font-size: 1.45rem;
+    margin-right: 0.7rem;
+  }
+  .social_link_list_item {
+    .link_icon {
+      font-size: 1.8rem;
+      margin-left: 1rem;
+    }
+    margin-bottom: 0.3rem;
+    // a.link {
+    //   color: vars.$linkcolorLight;
+    //   &.active,
+    //   :visited {
+    //     color: vars.$linkcolorLight;
+    //   }
+    // }
+  }
+}
 /*********************
      footer
   *********************/
 .footer_section {
-  background: $themecolorLilaSuperDark;
-  color: $textcolor_white;
+  background: vars.$themecolorLilaSuperDark;
+  color: vars.$textcolor_white;
   padding: 3rem 0 1rem 0;
-  @media all and (min-width: $mobileM) {
+  @media all and (min-width: vars.$mobileM) {
     min-height: 500px;
     padding: 4rem 0 2rem 0;
   }
-  @media all and (min-width: $desktopL) {
+  @media all and (min-width: vars.$desktopL) {
     min-height: 700px;
     padding: 8rem 0 2rem 0;
   }
   a {
-    color: $linkcolorLight;
+    color: vars.$linkcolorLight;
     &:hover {
-      filter: drop-shadow(0 0 3px $linkcolorLight);
+      filter: drop-shadow(0 0 3px vars.$linkcolorLight);
     }
   }
   .heading_2 {
-    color: $themecolorPurple;
+    color: vars.$themecolorPurple;
     margin-top: 1rem;
   }
   .contact_ways {
@@ -1186,10 +1089,10 @@ a {
   }
   .social_link_list {
     justify-content: flex-start;
-    @media all and (min-width: $desktop) {
+    @media all and (min-width: vars.$desktop) {
       justify-content: flex-end;
     }
-    .link_icon{
+    .link_icon {
       margin-left: 0 !important;
     }
   }
@@ -1234,35 +1137,40 @@ p.footer_copy {
 
 .back_to_top_link {
   font-size: 1.5rem;
-  @media all and (min-width: $laptop) {
+  @media all and (min-width: vars.$laptop) {
     font-size: 2rem;
   }
 }
 
-/*********************
-     social_link_list
-  *********************/
-.social_link_list {
-  display: flex;
-  justify-content: flex-end;
-  .fa-envelope,
-  .fa-mobile-screen-button,
-  .fa-location-dot {
-    font-size: 1.45rem;
-    margin-right: 0.7rem;
-  }
-  .social_link_list_item {
-    .link_icon {
-      font-size: 1.8rem;
-      margin-left: 1rem;
-    }
-    margin-bottom: 0.3rem;
-    // a.link {
-    //   color: $linkcolorLight;
-    //   &.active,
-    //   :visited {
-    //     color: $linkcolorLight;
-    //   }
-    // }
-  }
-}
+//image wrapper
+// .cover_image_wrapper {
+//   position: relative;
+//   border-radius: vars.$themeBorderRadius;
+//   border-radius: 30px;
+
+//   min-height: 900px;
+//   padding-bottom: 10rem;
+//   margin-bottom: 5rem;
+//   display: flex;
+//   flex-direction: column;
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   padding-left: 8rem;
+//   margin: 30px 0;
+
+//   @media all and (min-width: vars.$mobileM) {
+//     padding: 3.5rem 3.5rem 1rem 3.5rem;
+//   }
+//   &::before {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     background: rgba(0, 0, 0, 0.4);
+//     content: "";
+//     display: block;
+//     border-radius: 30px;
+//   }
+// }

@@ -7,53 +7,37 @@ $laptopL: 1200px;
 $desktop: 1400px;
 $desktopL: 1600px;
 
-//portfolio-project
-//bg
-
-$themecolorGreenDark: #04714E;
-$themecolorGreenMedium: #01BF2D;
-$themecolorGreenLight: #9DE14E;
-
-
 //2025
 $themecolorPurple: #C473C4;
-$themecolorPurpleLight: #f7edf7;
-
 $themecolorLilaLight: #8E8BD8;
 $themecolorLilaLightest: #dad9f2;
 $themecolorLilaDark: #525298; //#5C5CA8;
 $themecolorLilaSuperDark: #121221;
 $background_beige: #f4f0f0;
 
-
 //text
 $textcolor_white: #fff;
 $textcolor_dark: #1b1b31;
 $textcolor_lighter: #003066;
 //other 
-$lightgray: #eee;
-$turqoise_light: #b3ffff;
-$turqoise_medium: #00e6e6;
-$turqoise_dark: #00A3A3;
+
 $lilacPastel: #daa6f2;
-$bluecolor: #2e9ce6;
-$themecolorPink: #FFB8F1; 
-$orange: #f68c70; 
-$pink_lightest: #fcd9cf; 
 $greenVibrant: #82EAAD;
 $greenVibrantDarker: #1DAA58;
 $linkcolor: $greenVibrantDarker;
 $linkcolorLight: $greenVibrant;
- $navcolor: $textcolor_white;
+$navcolor: $textcolor_white;
+
+// $turqoise_light: #b3ffff;
+// $turqoise_medium: #00e6e6;
+// $turqoise_dark: #00A3A3;
+// $bluecolor: #2e9ce6;
+// $themecolorPink: #FFB8F1; 
+// $orange: #f68c70; 
+//$pink_lightest: #fcd9cf;
 
 $themeBorderRadius: 20px;
 $themeBoxShadow: 0 2px 8px 0 rgba(0, 0, 0, 0.8);
 $themeBoxShadowLight: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 
-//font sizes
-//mobile
-
-//laptop ($laptop)
-
-//desktop ($desktopL)
 

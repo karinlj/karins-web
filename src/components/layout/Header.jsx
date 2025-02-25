@@ -33,28 +33,25 @@ const Header = () => {
       <div className="container">
         <div className="row justify-content-between align-items-center">
           <div className="col">
-              <NavLink to="/" onClick={clickLink} className="logo_link">
-                <img src={logo} alt="logo" className="logo_karin_web" />
-              </NavLink>
-            </div>
-         
-        
-            <div className="col col-md-8">  
+            <NavLink to="/" onClick={clickLink} className="logo_link">
+              <img src={logo} alt="logo" className="logo_karin_web" />
+            </NavLink>
+          </div>
+
+          <div className="col col-md-8">
             <nav className="navbar_bigscreen">
               <Navlinks />
             </nav>
             <ToggleBtn toggleMenu={toggleMenu} mobileOpen={mobileOpen} />
+          </div>
 
-              </div>
-
-            <nav
-              className={`navbar_mobile ${
-                mobileOpen ? "navbar_mobile_open" : ""
-              }`}
-            >
-              <Navlinks clickLink={clickLink} />
-            </nav>
-       
+          <nav
+            className={`navbar_mobile ${
+              mobileOpen ? "navbar_mobile_open" : ""
+            }`}
+          >
+            <Navlinks clickLink={clickLink} />
+          </nav>
         </div>
       </div>
     </header>
