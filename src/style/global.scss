@@ -72,7 +72,7 @@ main {
   animation: transitionIn 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   // padding-bottom: 3rem;
 }
-section .top_section,
+ .top_section,
 .about_me_section,
 .services_section,
 .cases_section,
@@ -106,9 +106,7 @@ li {
   font-size: 1.1rem;
   // line-height: 1.6;
   font-weight: 400;
-  // @media all and (min-width: vars.$desktopL) {
-  //   font-size: 1.3rem;
-  // }
+
 }
 h1,
 h2,
@@ -126,12 +124,15 @@ a {
     display: inline-block;
     color: vars.$textcolor_white;
     background: vars.$themecolorLilaSuperDark;
-    padding: 0.7rem 1.5rem 0.8rem 1.5rem;
+    padding: 0.8rem 1.5rem 0.9rem 1.5rem;
     border-radius: vars.$themeBorderRadius;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     min-width: 7rem;
     text-align: center;
     font-weight: 600;
+      @media all and (min-width: vars.$mobileM) {
+        margin-top: 3rem;
+  }
     &:hover {
       filter: drop-shadow(0 0 3px vars.$textcolor_white);
     }
@@ -163,8 +164,8 @@ a {
   }
 }
 .right_align {
-  margin-top: 2rem;
-  @media all and (min-width: vars.$desktop) {
+  // margin-top: 2rem;
+  @media all and (min-width: vars.$laptop) {
     text-align: right;
     margin-top: 0;
   }
@@ -339,8 +340,12 @@ a {
 ***********************/
 .top_section {
   height: 40rem;
-  padding-top: 5rem;
+  padding-top: 2rem;
   background: vars.$themecolorLilaDark;
+  position: relative;
+  @media all and (min-width: vars.$mobileS) {
+    padding-top: 5rem;
+  }
   .small_heading {
     padding-top: 0;
     margin-bottom: 0.5rem;
@@ -348,25 +353,26 @@ a {
   .medium_text {
     margin-top: 2rem;
     @media all and (min-width: vars.$laptop) {
-      margin-top: 4rem;
+      margin-top: 0;
     }
-  }
-
+  } 
   .arrow_pict {
     padding: 1rem;
-    width: 11rem;
-    margin-left: 3rem;
+    width: 10rem;
+     margin-left: 5rem;
     @media all and (min-width: vars.$mobileM) {
-      padding: 2rem 1rem;
-      width: 13rem;
-      margin-left: 3rem;
+      // width: 13rem;
     }
     @media all and (min-width: vars.$laptop) {
-      width: 14rem;
-      margin-left: -3rem;
+      width: 11rem;
+       margin-left: -8rem;
+    }
+    @media all and (min-width: vars.$laptopL) {
+      margin-left: -5rem;
     }
     @media all and (min-width: vars.$desktopL) {
-      width: 15rem;
+      width: 13rem;
+       margin-left: -5rem;
     }
   }
 }

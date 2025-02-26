@@ -3,7 +3,7 @@ import {
   getTimeLineItemsData as getTimeLineItemsData_API,
 } from "../karinWeb_api";
 import { useState, useEffect } from "react";
-import arrow from "../images/arrow_lila.png";
+import arrow from "../images/arrow_lila_2.png";
 
 const Process = () => {
   const [timelineItems, setTimelineItems] = useState([]);

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { getTopData as getTopData_API } from "../karinWeb_api";
-import arrow from "../images/arrow_green_3.png";
-
+import arrow from "../images/arrow_green_9.png";
 
 const TopSection = () => {
   const [topData, setTopData] = useState(null);
@@ -38,6 +37,10 @@ const TopSection = () => {
           <div className="row justify-content-between align-items-center">
             <div className="col-12 col-lg-6">
               <h2 className="small_heading">{preamble}</h2>
+            </div>
+          </div>
+          <div className="row justify-content-between align-items-center">
+            <div className="col-12 col-lg-6">
               <h1 className="heading_1">{title}</h1>
             </div>
             <div className="col-12 col-lg-5">
@@ -45,9 +48,17 @@ const TopSection = () => {
               <img src={arrow} alt="arrow" className="arrow_pict" />
             </div>
           </div>
-          <a href={ctaLink} className="btn_link">
-            {ctaText}
-          </a>
+
+          <div className="row justify-content-between align-items-center">
+            <div className="col-12 col-lg-6">
+              <div>
+                <a href={ctaLink} className="btn_link">
+                  {ctaText}
+                </a>
+              </div>
+            </div>
+            <div className="col-12 col-lg-6"></div>
+          </div>
         </div>
       </section>
     </section>
