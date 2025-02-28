@@ -617,9 +617,13 @@ a {
   .heading {
     cursor: pointer;
     transition: all 0.4s linear;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    @media all and (min-width: vars.$mobileM) {
+      padding: 0.5rem 1rem;
+    }
     h2 {
       font-size: 1.3rem;
       @media all and (min-width: vars.$laptop) {
@@ -632,10 +636,13 @@ a {
     .fa-angle-down {
       transition: all 0.3s linear;
       font-size: 1.2rem;
-      margin: 0 1rem;
+      margin: 0 0.1rem 0 0.5rem;
       height: 1.1rem;
       padding: 2px;
       color: vars.$themecolorLilaDark;
+      @media all and (min-width: vars.$mobileM) {
+        margin: 0 1rem;
+      }
       &:hover {
         color: vars.$linkcolor;
       }
