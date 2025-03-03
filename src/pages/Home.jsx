@@ -1,4 +1,4 @@
-import {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 // import { client } from "../../client";
 // import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
@@ -10,9 +10,8 @@ import Process from "../components/Process";
 import ServicesMore from "../components/ServicesMore";
 
 const Home = () => {
-
   //stop the fetch when component using it unmounts
-//   const abortContrl = new AbortController();
+  //   const abortContrl = new AbortController();
 
   //   const getAboutData = () => {
   //     client
@@ -37,14 +36,13 @@ const Home = () => {
 
   return (
     <main className="main">
-
-<TopSection/>
-<AboutMe/>
-<Services/>
-<Cases/>
-<Process/>
-<ServicesMore/>
-  </main>
-  )
+      <TopSection />
+      <AboutMe />
+      <Services />
+      <Cases />
+      <Process />
+      <ServicesMore />
+    </main>
+  );
 };
 export default Home;

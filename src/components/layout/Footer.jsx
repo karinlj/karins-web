@@ -34,7 +34,7 @@ const Footer = () => {
           <div className="col-12 col-md-6 col-xl-4">
             <div className="right_align" id="contact">
               <p className="large_text">
-                Kontakta mig så här för mer information och för kostnadsförslag.
+                Kontakta mig så här för mer information och för kostnadsförslag. Första mötet är kostnadsfritt.
               </p>
               <Contact/>
             </div>

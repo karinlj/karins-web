@@ -164,7 +164,7 @@ a {
   }
 }
 .right_align {
-  // margin-top: 2rem;
+   margin-top: 2rem;
   @media all and (min-width: vars.$laptop) {
     text-align: right;
     margin-top: 0;
@@ -227,7 +227,7 @@ a {
 .heading_1 {
   margin-bottom: 0.1rem;
   color: vars.$textcolor_white;
-  font-size: 2.3rem;
+  font-size: 3rem;
   font-weight: 900;
   line-height: 1.1;
   @media all and (min-width: vars.$mobileS) {
@@ -390,14 +390,7 @@ a {
   background-size: 30px 30px, 30px 30px, 80px 80px, 80px 80px, 80px 80px,
     80px 80px, 80px 80px, 80px 80px;
   background-color: #fff;
-  // .content_section {
-  //   .row {
-  //     flex-direction: column-reverse;
-  //     @media all and (min-width: vars.$laptop) {
-  //       flex-direction: row;
-  //     }
-  //   }
-  // }
+
   hr {
     visibility: hidden;
     padding: 1rem 0;
@@ -414,6 +407,12 @@ a {
       margin-top: 0;
       height: clamp(25rem, 30rem, 35rem);
       padding: 1rem 1rem 7rem 1rem;
+    }
+  }
+  .styled_card{
+    margin-top: 3rem;
+    @media all and (min-width: vars.$mobileM) {
+      margin-top: 0;
     }
   }
   .me_pict {
@@ -1102,7 +1101,7 @@ a {
   }
   .social_link_list {
     justify-content: flex-start;
-    @media all and (min-width: vars.$desktop) {
+    @media all and (min-width: vars.$laptop) {
       justify-content: flex-end;
     }
     .link_icon {
