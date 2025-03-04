@@ -128,7 +128,7 @@ a {
     margin-top: 1rem;
     min-width: 7rem;
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
     @media all and (min-width: vars.$mobileM) {
       margin-top: 3rem;
     }
@@ -1160,9 +1160,9 @@ p.footer_copy {
 }
 
 .back_to_top_link {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   @media all and (min-width: vars.$laptop) {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
 }
 
