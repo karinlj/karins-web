@@ -3,8 +3,11 @@ import Navlinks from "./Navlinks";
 import { NavLink } from "react-router-dom";
 import ToggleBtn from "../../components/ToggleBtn";
 import logo from "../../images/K._white.png";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const Header = () => {
+  const { isDark, toggleMode } = useContext(ThemeContext);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -29,7 +32,7 @@ const Header = () => {
   }, [mobileOpen]);
 
   return (
-    <header className="nav_header" id="nav">
+    <header className={`nav_header ${isDark ? "dark" : ""}`} id="nav">
       <div className="container">
         <div className="row justify-content-between align-items-center">
           <div className="col">
@@ -41,6 +44,7 @@ const Header = () => {
           <div className="col col-md-8">
             <nav className="navbar_bigscreen">
               <Navlinks />
+          
             </nav>
             <ToggleBtn toggleMenu={toggleMenu} mobileOpen={mobileOpen} />
           </div>
@@ -52,6 +56,21 @@ const Header = () => {
           >
             <Navlinks clickLink={clickLink} />
           </nav>
+          <button className="theme_switch" onClick={toggleMode}>
+                {isDark ? (
+                  <i
+                    className="fas fa-sun"
+                    aria-hidden="true"
+                    aria-label="Light Mode"
+                  ></i>
+                ) : (
+                  <i
+                    className="fas fa-moon"
+                    aria-hidden="true"
+                    aria-label="Dark Mode"
+                  ></i>
+                )}
+              </button>
         </div>
       </div>
     </header>

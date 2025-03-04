@@ -1,28 +1,9 @@
 @use "variables" as vars;
-// @import "./variables.scss";
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   height: 100%;
   font-size: 16px;
-  //dark
-  &.dark {
-    background: vars.$themecolorLilaSuperDark;
-    .nav_header {
-      border-right: 1px solid vars.$textcolor_lighter;
-    }
-    .top_section,
-    .about_me_section,
-    .cases_section,
-    .process_section,
-    .services_section,
-    .services_more_section,
-    .footer_section,
-    .nav_header {
-      color-scheme: dark;
-      background: vars.$themecolorLilaSuperDark;
-    }
-  }
 }
 * {
   box-sizing: border-box;
@@ -70,9 +51,28 @@ body.no_scroll {
 }
 main {
   animation: transitionIn 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  // padding-bottom: 3rem;
+  &.dark {
+    .top_section,
+    .about_me_section,
+    .services_section,
+    .cases_section,
+    .process_section,
+    .services_more_section {
+      color-scheme: dark;
+      background: vars.$themecolorLilaSuperDark;
+      color: vars.$textcolor_white;
+    }
+    a.section_link {
+      color: vars.$greenVibrant;
+     }
+     a.btn_link {
+      background: vars.$themecolorLilaLight;
+      color: vars.$themecolorLilaSuperDark;
+     }
+  
+  }
 }
- .top_section,
+.top_section,
 .about_me_section,
 .services_section,
 .cases_section,
@@ -106,7 +106,6 @@ li {
   font-size: 1.1rem;
   // line-height: 1.6;
   font-weight: 400;
-
 }
 h1,
 h2,
@@ -130,9 +129,9 @@ a {
     min-width: 7rem;
     text-align: center;
     font-weight: 600;
-      @media all and (min-width: vars.$mobileM) {
-        margin-top: 3rem;
-  }
+    @media all and (min-width: vars.$mobileM) {
+      margin-top: 3rem;
+    }
     &:hover {
       filter: drop-shadow(0 0 3px vars.$textcolor_white);
     }
@@ -152,19 +151,16 @@ a {
 }
 .loading {
   padding: 1rem;
-  color: vars.$lilacPastel;
+  color: vars.$textcolor_lighter;
 }
 //fonts - styles and sizes
 .content_section {
   &.white {
     color: vars.$textcolor_white;
   }
-  &.dark {
-    color: vars.$textcolor_dark;
-  }
 }
 .right_align {
-   margin-top: 2rem;
+  margin-top: 2rem;
   @media all and (min-width: vars.$laptop) {
     text-align: right;
     margin-top: 0;
@@ -178,8 +174,6 @@ a {
   @media all and (min-width: vars.$mobileM) {
     font-size: 1.3rem;
   }
-  // &.dark {
-  // }
 }
 .smallest_text {
   font-size: 0.7rem;
@@ -197,9 +191,6 @@ a {
   font-size: 1.2rem;
   @media all and (min-width: vars.$laptopL) {
     font-size: 1.4rem;
-  }
-  &.dark {
-    color: vars.$textcolor_dark;
   }
 }
 
@@ -227,7 +218,7 @@ a {
 .heading_1 {
   margin-bottom: 0.1rem;
   color: vars.$textcolor_white;
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 900;
   line-height: 1.1;
   @media all and (min-width: vars.$mobileS) {
@@ -242,9 +233,7 @@ a {
   @media all and (min-width: vars.$laptopL) {
     font-size: 6.5rem;
   }
-  &.dark {
-    color: vars.$textcolor_dark;
-  }
+
   &.upper {
     text-transform: uppercase;
   }
@@ -343,6 +332,7 @@ a {
   padding-top: 2rem;
   background: vars.$themecolorLilaDark;
   position: relative;
+
   @media all and (min-width: vars.$mobileS) {
     padding-top: 5rem;
   }
@@ -352,27 +342,28 @@ a {
   }
   .medium_text {
     margin-top: 2rem;
+    line-height: 1.4;
     @media all and (min-width: vars.$laptop) {
       margin-top: 0;
     }
-  } 
+  }
   .arrow_pict {
     padding: 1rem;
     width: 10rem;
-     margin-left: 5rem;
+    margin-left: 5rem;
     @media all and (min-width: vars.$mobileM) {
       // width: 13rem;
     }
     @media all and (min-width: vars.$laptop) {
       width: 11rem;
-       margin-left: -8rem;
+      margin-left: -8rem;
     }
     @media all and (min-width: vars.$laptopL) {
       margin-left: -5rem;
     }
     @media all and (min-width: vars.$desktopL) {
       width: 13rem;
-       margin-left: -5rem;
+      margin-left: -5rem;
     }
   }
 }
@@ -409,7 +400,7 @@ a {
       padding: 1rem 1rem 7rem 1rem;
     }
   }
-  .styled_card{
+  .styled_card {
     margin-top: 3rem;
     @media all and (min-width: vars.$mobileM) {
       margin-top: 0;
@@ -424,14 +415,6 @@ a {
       filter: drop-shadow(0 0 3px vars.$linkcolor);
     }
   }
-  // .me_pict_caption {
-  //   color: vars.$textcolor_lighter;
-  //   font-size: 1rem;
-  //   margin-top: 1rem;
-  //   @media all and (min-width: vars.$laptop) {
-  //     font-size: 1.1rem;
-  //   }
-  // }
 }
 /**********************
   services_section
@@ -451,17 +434,11 @@ a {
     @media all and (min-width: vars.$mobileS) {
       margin-bottom: 1.5rem;
     }
-    // @media all and (min-width: vars.$mobileM) {
-    //   padding: 0.5rem 0.5rem 2rem 0.5rem;
-    // }
-    // @media all and (min-width: vars.$laptop) {
-    //   padding: 1rem 1rem 2rem 1rem;
-    // }
-
     p {
       font-size: 1rem;
       font-weight: 400;
       margin-top: 0.7rem;
+      line-height: 1.4;
     }
   }
   .services_news_banner {
@@ -776,11 +753,15 @@ a {
    header and nav
 ***********************/
 .nav_header {
+  position: relative;
   background: vars.$themecolorLilaDark;
   width: 100%;
   z-index: 100;
   padding: 1rem 0;
   height: 5rem;
+  &.dark {
+    background: vars.$themecolorLilaSuperDark;
+  }
   .logo_link {
     position: relative;
     z-index: 1000;
@@ -985,6 +966,36 @@ a {
     }
   }
 }
+/**********************
+  theme_switch
+***********************/
+.theme_switch {
+  position: absolute;
+  z-index: 20;
+  top: 1.6rem;
+  right: 5rem;
+  width: 35px;
+  height: 35px;
+  border-radius: calc(vars.$themeBorderRadius/2);
+  background: transparent;
+  border: 1px solid vars.$textcolor_white;
+  cursor: pointer;
+  color: lightyellow;
+  padding: 7px;
+  transition: 0.3s all ease-in;
+  outline: none;
+  @media all and (min-width: vars.$mobileM) {
+    position: relative;
+    top: 0;
+    right: 16px;
+  }
+  &:hover {
+    filter: drop-shadow(0 0 3px white);
+  }
+  i {
+    font-size: 1.2rem;
+  }
+}
 /*********************
      social icons
   *********************/
@@ -1050,7 +1061,8 @@ a {
   .social_link_list_item {
     .link_icon {
       font-size: 1.8rem;
-      margin-left: 1rem;
+      // margin-left: 1rem;
+      margin: 0 1rem;
     }
     margin-bottom: 0.3rem;
     // a.link {

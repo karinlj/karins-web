@@ -14,14 +14,8 @@ const TopSection = () => {
     }
   };
 
-  // const abortContrl = new AbortController();
   useEffect(() => {
     getTopData();
-    //clean up
-    // return () => {
-    //   abortContrl.abort();
-    // };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Make sure data is not undefined

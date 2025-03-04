@@ -1,4 +1,3 @@
-// import SocialIcons from "../SocialIcons";
 import react_logo from "../../images/react_logo.png";
 import contentful_logo from "../../images/contentful_logo.png";
 import logo from "../../images/K._dark.png";
@@ -14,7 +13,6 @@ const Footer = () => {
           position: "relative",
         }}
       >
-        {/* <SocialIcons /> */}
         <div>
           <a href="#nav">
             <img src={logo} alt="logo" className="logo_karin_web" />

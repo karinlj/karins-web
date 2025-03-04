@@ -28,9 +28,6 @@ const Cases = () => {
   useEffect(() => {
     getCaseItemsData();
     getTestimonialItemsData();
-    //   return () => {
-    //     second
-    //   }
   }, []);
 
   if (!caseItems || !testimonialItems) {
@@ -39,7 +36,7 @@ const Cases = () => {
   return (
     <section className="cases_section" id="cases">
       <div className="container">
-        <h2 className="small_heading">ETT URVAL AV MINA kundprojekt</h2>
+        <h2 className="small_heading">Ett urval av mina kundprojekt</h2>
       </div>
       <section className="content_section">
         <section className="testimonial_items_section">

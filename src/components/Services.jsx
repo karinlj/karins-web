@@ -12,7 +12,6 @@ const Services = () => {
   const getServicesData = async () => {
     try {
       const data = await getServicesData_API();
-      // console.log("Services_data", data);
       setServicesData(data);
     } catch (error) {
       console.error("Error fetching services data:", error);
@@ -22,7 +21,6 @@ const Services = () => {
   const getServicesItems = async () => {
     try {
       const data = await getServiceItemData_API();
-      // console.log("ServicesItems_data", data);
       setServicesItems(data);
     } catch (error) {
       console.error("Error fetching service items data:", error);
@@ -32,22 +30,13 @@ const Services = () => {
   useEffect(() => {
     getServicesData();
     getServicesItems();
-    // return () => {
-    //   second
-    // }
   }, []);
 
   if (!servicesData || !servicesItems) {
     return <div className="loading">Loading ...</div>;
   }
-  const {
-    heading,
-    description,
-    linkText,
-    link,
-    newsBannerHeading,
-    newsBannerText,
-  } = servicesData.fields;
+  const { heading, description, linkText, newsBannerHeading, newsBannerText } =
+    servicesData.fields;
 
   return (
     <section className="services_section" id="services">
@@ -78,7 +67,9 @@ const Services = () => {
                               <h3 className="medium_text">
                                 {item.fields.heading}
                               </h3>
-                              <p className="">{item.fields.description}</p>
+                              <p className="styled_card_text ">
+                                {item.fields.description}
+                              </p>
                             </div>
                           </div>
                         );
@@ -96,7 +87,7 @@ const Services = () => {
 
           <div className="link_text">
             <HashLink to="#services_more" className="section_link">
-            {linkText}
+              {linkText}
             </HashLink>
           </div>
         </div>

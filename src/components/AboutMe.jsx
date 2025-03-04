@@ -17,7 +17,6 @@ const AboutMe = () => {
 
   useEffect(() => {
     getAboutData();
-    // console.log("aboutData:", aboutData);
   }, []);
 
   if (!aboutData) {
@@ -33,26 +32,26 @@ const AboutMe = () => {
       <section className="content_section">
         <div className="container">
           <h2 className="small_heading dark">{heading}</h2>
-      
+
           <div className="row justify-content-between">
             <div className="col-12 col-md-6 col-xl-8">
               <div className="large_text">
-              {aboutData ? (
-                <>
-                  <div>
-                    {aboutData ? documentToReactComponents(content) : ""}
-                  </div>
-                </>
-              ) : (
-                ""
-              )}
-                </div>
-                     <div className="link_text">
-                     Ta en titt på ett urval av mina&nbsp;
-                            <HashLink to="#cases" className="section_link">
-                            Projekt
-                            </HashLink>
-                          </div>
+                {aboutData ? (
+                  <>
+                    <div>
+                      {aboutData ? documentToReactComponents(content) : ""}
+                    </div>
+                  </>
+                ) : (
+                  ""
+                )}
+              </div>
+              <div className="link_text">
+                Ta en titt på ett urval av mina&nbsp;
+                <HashLink to="#cases" className="section_link">
+                  Projekt
+                </HashLink>
+              </div>
             </div>
             <div className="col-12 col-md-6 col-xl-4">
               <div className="styled_card pict">
@@ -71,7 +70,6 @@ const AboutMe = () => {
               </div>
             </div>
           </div>
-    
         </div>
       </section>
     </section>

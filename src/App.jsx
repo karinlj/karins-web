@@ -1,19 +1,21 @@
-// import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
+import ThemeProvider from "./context/ThemeContext";
 function App() {
+  
   return (
     <BrowserRouter>
-      <Header />
+      <ThemeProvider>
+          <Header />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
 
-      <Footer />
+          <Footer />
+      </ThemeProvider>
     </BrowserRouter>
   );
 }
