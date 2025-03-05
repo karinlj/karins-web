@@ -32,7 +32,7 @@ const Header = () => {
   }, [mobileOpen]);
 
   return (
-    <header className={`nav_header ${isDark ? "dark" : ""}`} id="nav">
+    <header className={`nav_header ${isDark ? "dark" : ""}`} id="nav_header">
       <div className="container">
         <div className="row justify-content-between align-items-center">
           <div className="col">

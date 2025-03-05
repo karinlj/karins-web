@@ -18,6 +18,7 @@ ol {
 }
 .logo_karin_web {
   width: 3rem;
+  border-radius: calc(vars.$themeBorderRadius/2);
 }
 :focus-visible {
   outline: 4px dotted lightgrey;
@@ -57,19 +58,19 @@ main {
     .services_section,
     .cases_section,
     .process_section,
-    .services_more_section {
+    .services_more_section,.not_found_section {
       color-scheme: dark;
       background: vars.$themecolorLilaSuperDark;
       color: vars.$textcolor_white;
+      border-bottom: 1px solid vars.$themecolorLilaDark;
     }
     a.section_link {
       color: vars.$greenVibrant;
-     }
-     a.btn_link {
+    }
+    a.btn_link {
       background: vars.$themecolorLilaLight;
       color: vars.$themecolorLilaSuperDark;
-     }
-  
+    }
   }
 }
 .top_section,
@@ -77,7 +78,7 @@ main {
 .services_section,
 .cases_section,
 .process_section,
-.services_more_section {
+.services_more_section,.not_found_section {
   min-height: 400px;
   padding: 6rem 0;
   @media all and (min-width: vars.$mobileM) {
@@ -89,15 +90,15 @@ main {
     padding: 10rem 0;
   }
 }
-.my-gutters {
-  margin-right: 0;
-  margin-left: 0;
-  > .col,
-  > [class*="col-"] {
-    padding-right: 6px;
-    padding-left: 6px;
-  }
-}
+// .my-gutters {
+//   margin-right: 0;
+//   margin-left: 0;
+//   > .col,
+//   > [class*="col-"] {
+//     padding-right: 6px;
+//     padding-left: 6px;
+//   }
+// }
 .site_content {
   min-height: 100vh;
 }
@@ -138,6 +139,9 @@ a {
   }
   &:hover {
     filter: drop-shadow(0 0 3px vars.$linkcolor);
+  }
+  &:focus {
+    filter: drop-shadow(0 0 3px vars.$textcolor_white);
   }
 }
 .section_link {
@@ -348,7 +352,7 @@ a {
     }
   }
   .arrow_pict {
-    padding: 1rem;
+    padding: 0.5rem;
     width: 10rem;
     margin-left: 5rem;
     @media all and (min-width: vars.$mobileM) {
@@ -368,6 +372,20 @@ a {
   }
 }
 
+/**********************
+  not_found_section
+***********************/
+.not_found_section {
+  background: vars.$themecolorLilaDark;
+}
+.not_found_section_text {
+  p {
+    margin-bottom: 1rem;
+    a {
+      color: vars.$greenVibrant;
+    }
+  }
+}
 /**********************
   about_me_section
 ***********************/
@@ -758,13 +776,19 @@ a {
   width: 100%;
   z-index: 100;
   padding: 1rem 0;
-  height: 5rem;
+  height: 5.5rem;
   &.dark {
     background: vars.$themecolorLilaSuperDark;
+    .logo_karin_web {
+      border: 1px solid vars.$textcolor_white;
+    }
   }
   .logo_link {
     position: relative;
     z-index: 1000;
+    &:focus {
+      filter: none;
+    }
   }
   .nav_links {
     display: flex;
@@ -815,7 +839,7 @@ a {
     }
     //tweeking social icons component
     .social_icons {
-      padding: 0.8rem 0.2rem;
+      padding: 0.2rem;
       display: none;
       @media all and (min-width: vars.$mobileM) {
         display: flex;
@@ -908,7 +932,6 @@ a {
   .navbar_bigscreen {
     position: relative;
     z-index: 100;
-    padding: 0.5rem 0;
     display: none;
     flex-wrap: nowrap;
     align-items: center;

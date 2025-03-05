@@ -14,14 +14,12 @@ const Footer = () => {
         }}
       >
         <div>
-          <a href="#nav">
             <img src={logo} alt="logo" className="logo_karin_web" />
-          </a>
         </div>
         <h3 className="heading_2">Karin Ljunggren</h3>
         <div className="row justify-content-between">
           <div className="col-12 col-md-6 col-xl-4">
-          <p className="large_text white">Webbutvecklare</p>
+            <p className="large_text white">Webbutvecklare</p>
 
             <p className="medium_text">
               Jag designar, bygger och förvaltar skräddarsydda webbplatser.
@@ -32,11 +30,12 @@ const Footer = () => {
           <div className="col-12 col-md-6 col-xl-4">
             <div className="right_align" id="contact">
               <p className="large_text">
-                Kontakta mig för mer information och för kostnadsförslag. Första mötet är kostnadsfritt.
+                Kontakta mig för mer information och för kostnadsförslag. Första
+                mötet är kostnadsfritt.
               </p>
-              <Contact/>
+              <Contact />
             </div>
-            <SocialIcons/>
+            <SocialIcons />
           </div>
         </div>
 
@@ -71,7 +70,7 @@ const Footer = () => {
             </p>{" "}
           </div>
           <div className="back_to_top_link">
-            <a href="#nav">
+            <a href="#nav_header">
               <span className="to_top_icon">
                 {" "}
                 <i className="fas fa-angle-up"></i>
