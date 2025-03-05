@@ -13,7 +13,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
-          {/* <Route path="*" element={<Navigate to="404.html" />} /> */}
         </Routes>
 
         <Footer />

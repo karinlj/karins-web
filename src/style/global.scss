@@ -124,7 +124,7 @@ a {
     display: inline-block;
     color: vars.$textcolor_white;
     background: vars.$themecolorLilaSuperDark;
-    padding: 0.8rem 1.5rem 0.9rem 1.5rem;
+    padding: 0.9rem 1.6rem 1rem 1.6rem;
     border-radius: vars.$themeBorderRadius;
     margin-top: 1rem;
     min-width: 7rem;
@@ -353,10 +353,11 @@ a {
   }
   .arrow_pict {
     padding: 0.5rem;
-    width: 10rem;
+    width: 8rem;
     margin-left: 5rem;
-    @media all and (min-width: vars.$mobileM) {
-      // width: 13rem;
+    @media all and (min-width: vars.$mobileS) {
+       width: 10rem;
+       margin-left: 8rem;
     }
     @media all and (min-width: vars.$laptop) {
       width: 11rem;
@@ -366,7 +367,7 @@ a {
       margin-left: -5rem;
     }
     @media all and (min-width: vars.$desktopL) {
-      width: 13rem;
+      width: 12rem;
       margin-left: -5rem;
     }
   }
@@ -550,22 +551,25 @@ a {
 
   .arrow_pict {
     padding: 1rem;
-    width: 11rem;
+    width: 8rem;
+    @media all and (min-width: vars.$mobileS) {
+      width: 10rem;
+      margin-left: 1rem;
+   }
     @media all and (min-width: vars.$mobileM) {
       padding: 2rem 1rem;
       margin-left: 3rem;
       width: 13rem;
     }
     @media all and (min-width: vars.$laptop) {
-      width: 14rem;
+      width: 13rem;
       margin-left: 10rem;
     }
     @media all and (min-width: vars.$desktop) {
-      width: 15rem;
       margin-left: 14rem;
     }
     @media all and (min-width: vars.$desktopL) {
-      width: 16rem;
+      width: 14rem;
       margin-left: 16rem;
     }
   }
