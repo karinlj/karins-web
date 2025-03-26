@@ -51,7 +51,7 @@ const Cases = () => {
                   return (
                     <div className="col-12 col-sm-6" key={index}>
                       <div className="testimonial_item">
-                        <p className="medium_text">
+                        <p className="medium_text light">
                           <span>
                             {" "}
                             <i className="fa-solid fa-quote-left"></i>

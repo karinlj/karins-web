@@ -507,7 +507,10 @@ a {
     }
   }
   .medium_text {
-    font-weight: 700;
+     font-weight: 700;
+     &.light {
+      font-weight: 400;
+     }
   }
   .styled_card {
     padding: 1rem 1rem 2rem 1rem;
