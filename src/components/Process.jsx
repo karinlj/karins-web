@@ -36,7 +36,11 @@ const Process = () => {
   }, []);
 
   if (!workProcess || !timelineItems) {
-    return <div className="loading">Loading ...</div>;
+    return (
+      <div className="container">
+        <div className="loading">Loading ...</div>
+      </div>
+    );
   }
 
   const { heading, description, text } = workProcess.fields;
@@ -67,10 +71,15 @@ const Process = () => {
                         : (alignClass = "left");
                     }
                     return (
-                      <div className={`timeline_container ${alignClass}`} key={index}>
+                      <div
+                        className={`timeline_container ${alignClass}`}
+                        key={index}
+                      >
                         <div className="timeline_content">
-                          <h4>{item.fields.heading}</h4>
-                          <p className="smaller_text">{item.fields.description}</p>
+                          <h3>{item.fields.heading}</h3>
+                          <p className="smaller_text">
+                            {item.fields.description}
+                          </p>
                         </div>
                       </div>
                     );

@@ -33,7 +33,11 @@ const Services = () => {
   }, []);
 
   if (!servicesData || !servicesItems) {
-    return <div className="loading">Loading ...</div>;
+    return (
+      <div className="container">
+        <div className="loading">Loading ...</div>
+      </div>
+    );
   }
   const { heading, description, linkText, newsBannerHeading, newsBannerText } =
     servicesData.fields;

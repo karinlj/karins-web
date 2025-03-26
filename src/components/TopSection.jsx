@@ -20,7 +20,11 @@ const TopSection = () => {
 
   // Make sure data is not undefined
   if (!topData) {
-    return <div className="loading">Loading ...</div>;
+    return (
+      <div className="container">
+        <div className="loading">Loading ...</div>
+      </div>
+    );
   }
   const { preamble, title, description, ctaLink, ctaText } = topData.fields;
 

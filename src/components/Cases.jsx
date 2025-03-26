@@ -31,7 +31,11 @@ const Cases = () => {
   }, []);
 
   if (!caseItems || !testimonialItems) {
-    return <div className="loading">Loading ...</div>;
+    return (
+      <div className="container">
+        <div className="loading">Loading ...</div>
+      </div>
+    );
   }
   return (
     <section className="cases_section" id="cases">
@@ -66,7 +70,7 @@ const Cases = () => {
                         <div className="testimonial_item_company_section">
                           <img
                             src={item.fields.companyLogo.fields.file.url}
-                            alt={item.fields.companyLogo.fields.file.title}
+                            alt={item.fields.companyLogo.fields.title}
                           />
                           <p className="medium_text">{item.fields.company}</p>
                         </div>
@@ -89,6 +93,7 @@ const Cases = () => {
                           href={item.fields.link}
                           className="case_item_link"
                           target="_blanc"
+                          aria-label="See project"
                         ></a>
                         <img
                           src={item.fields.image.fields.file.url}

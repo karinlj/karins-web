@@ -17,7 +17,8 @@ ol {
   list-style: none;
 }
 .logo_karin_web {
-  width: 3rem;
+  height: 50px;
+  width: 50px;
   border-radius: calc(vars.$themeBorderRadius/2);
 }
 :focus-visible {
@@ -51,14 +52,15 @@ body.no_scroll {
   }
 }
 main {
-  animation: transitionIn 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  // animation: transitionIn 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   &.dark {
     .top_section,
     .about_me_section,
     .services_section,
     .cases_section,
     .process_section,
-    .services_more_section,.not_found_section {
+    .services_more_section,
+    .not_found_section {
       color-scheme: dark;
       background: vars.$themecolorLilaSuperDark;
       color: vars.$textcolor_white;
@@ -78,7 +80,8 @@ main {
 .services_section,
 .cases_section,
 .process_section,
-.services_more_section,.not_found_section {
+.services_more_section,
+.not_found_section {
   min-height: 400px;
   padding: 6rem 0;
   @media all and (min-width: vars.$mobileM) {
@@ -356,8 +359,8 @@ a {
     width: 8rem;
     margin-left: 5rem;
     @media all and (min-width: vars.$mobileS) {
-       width: 10rem;
-       margin-left: 8rem;
+      width: 10rem;
+      margin-left: 8rem;
     }
     @media all and (min-width: vars.$laptop) {
       width: 11rem;
@@ -495,11 +498,11 @@ a {
     align-items: center;
     img {
       margin: 0.5rem 0.5rem 0 0;
-      max-height: 50px;
-      max-width: 50px;
+      height: 50px;
+      width: 50px;
       @media all and (min-width: vars.$desktop) {
-        max-height: 60px;
-        max-width: 90px;
+        height: 60px;
+        width: 60px;
       }
     }
   }
@@ -555,7 +558,7 @@ a {
     @media all and (min-width: vars.$mobileS) {
       width: 10rem;
       margin-left: 1rem;
-   }
+    }
     @media all and (min-width: vars.$mobileM) {
       padding: 2rem 1rem;
       margin-left: 3rem;
@@ -734,7 +737,8 @@ a {
   border: 3px dotted vars.$themecolorLilaDark;
   position: relative;
   border-radius: vars.$themeBorderRadius;
-  h4 {
+  h3 {
+    font-size: 1rem;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
   }
@@ -1173,12 +1177,12 @@ a {
     display: inline;
     padding-top: 0.5rem;
     &.react_logo {
-      width: 1.9rem;
-      height: auto;
+      height: 35px;
+      width: 30px;
     }
     &.contentful_logo {
-      width: 1.4rem;
-      height: auto;
+      height: 30px;
+      width: 20px;
     }
   }
 }

@@ -29,7 +29,11 @@ const ServicesMore = () => {
   }, []);
 
   if (!sericesMoreItems) {
-    return <div className="loading">Loading ...</div>;
+    return (
+      <div className="container">
+        <div className="loading">Loading ...</div>
+      </div>
+    );
   }
 
   return (
@@ -39,30 +43,31 @@ const ServicesMore = () => {
       </div>
       <section className="accordion_content_section">
         <div className="container">
-        <div className="row">
-        <div className="col-12 col-md-10 offset-md-1">
-          {/* item */}
-          {sericesMoreItems &&
-            sericesMoreItems.map((item, index) => {
-              return (
-                <button
-                  key={index}
-                  className="accordion_btn"
-                  onClick={toggleAccordion}
-                  aria-label="Service content"
-                  aria-expanded={openAccordion ? "true" : "false"}
-                >
-                  <div className="heading">
-                    <h2 className="">{item.fields.heading}</h2>
-                    <i className="fa-solid fa-angle-down"></i>
-                  </div>
-                  <p className="accordion_content medium_text">{item.fields.description}</p>
-                </button>
-              );
-            })}
-
-        </div>
-        </div>
+          <div className="row">
+            <div className="col-12 col-md-10 offset-md-1">
+              {/* item */}
+              {sericesMoreItems &&
+                sericesMoreItems.map((item, index) => {
+                  return (
+                    <button
+                      key={index}
+                      className="accordion_btn"
+                      onClick={toggleAccordion}
+                      aria-label="Service content"
+                      aria-expanded={openAccordion ? "true" : "false"}
+                    >
+                      <div className="heading">
+                        <h2 className="">{item.fields.heading}</h2>
+                        <i className="fa-solid fa-angle-down"></i>
+                      </div>
+                      <p className="accordion_content medium_text">
+                        {item.fields.description}
+                      </p>
+                    </button>
+                  );
+                })}
+            </div>
+          </div>
         </div>
       </section>
     </section>

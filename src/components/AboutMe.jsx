@@ -20,7 +20,11 @@ const AboutMe = () => {
   }, []);
 
   if (!aboutData) {
-    return <div className="loading">Loading ...</div>;
+    return (
+      <div className="container">
+        <div className="loading">Loading ...</div>
+      </div>
+    );
   }
 
   const { heading, content, mePict } = aboutData.fields;

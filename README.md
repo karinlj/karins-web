@@ -1,8 +1,39 @@
-# React + Vite
+# Karin Ljunggren - frilans
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img width="500px" src="./src/images/Screenshot.jpg" alt="Karin Ljunggren - frilans" />
 
-Currently, two official plugins are available:
+## React course-Lab2
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React project using the Vite tool and Contentful for Karin Ljunggren - frilans.
+
+## Installation
+
+To clone
+
+`https://github.com/karinlj/karins-web.git`
+
+To install
+
+`cd karins-web`
+
+`npm install`
+
+To run
+
+`npm run dev`
+
+## Built With
+
+- Vite
+- React.js
+- Contentful
+- SCSS
+- Fontawesome
+
+## Author
+
+- **Karin Ljunggren** - [karinlj](https://github.com/karinlj)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
