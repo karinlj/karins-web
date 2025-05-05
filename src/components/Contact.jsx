@@ -12,7 +12,7 @@ const Contact = () => {
                 text: "Jag finns i Kungälv utanför Göteborg, men allt arbete sker vanligtvis på distans.",
               },
             {
-              url: "mailto: kaljunggren@gmail.com",
+              url: "mailto: kaljunggren.frilans@gmail.com",
               urlText: "kaljunggren.frilans@gmail.com",
               icon: faEnvelope,
               ariaLabel: "Karin Ljunggren email",

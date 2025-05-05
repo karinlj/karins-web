@@ -39,19 +39,29 @@ const Services = () => {
       </div>
     );
   }
-  const { heading, description, linkText, newsBannerHeading, newsBannerText } =
-    servicesData.fields;
+    const {
+      heading,
+      description,
+      linkText,
+      newsBannerHeading,
+      newsBannerText,
+    } = servicesData.fields;
+ 
 
   return (
     <section className="services_section" id="services">
       <div className="container">
-        <h2 className="small_heading">{heading}</h2>
+        {servicesData ? <h2 className="small_heading">{heading}</h2> : ""}
       </div>
       <section className="content_section large_text white">
         <div className="container">
           <div className="row justify-content-between">
             <div className="col-12 col-lg-4">
-              <p className="services_section_description">{description}</p>
+              {servicesData ? (
+                <p className="services_section_description">{description}</p>
+              ) : (
+                ""
+              )}
             </div>
             <div className="col-12 col-lg-8">
               <section className="service_items_section">
@@ -83,17 +93,22 @@ const Services = () => {
               </section>
             </div>
           </div>
+          {servicesData ? (
+            <>
+              <section className="services_news_banner">
+                <h3 className="heading_2">{newsBannerHeading}</h3>
+                <p>{newsBannerText}</p>
+              </section>
 
-          <section className="services_news_banner">
-            <h3 className="heading_2">{newsBannerHeading}</h3>
-            <p>{newsBannerText}</p>
-          </section>
-
-          <div className="link_text">
-            <HashLink to="#services_more" className="section_link">
-              {linkText}
-            </HashLink>
-          </div>
+              <div className="link_text">
+                <HashLink to="#services_more" className="section_link">
+                  {linkText}
+                </HashLink>
+              </div>
+            </>
+          ) : (
+            ""
+          )}
         </div>
       </section>
     </section>

@@ -26,54 +26,46 @@ const AboutMe = () => {
       </div>
     );
   }
-
-  const { heading, content, mePict } = aboutData.fields;
-  const mePictSrc = `https:${mePict.fields.file.url}`;
-  const mePictTitle = mePict.fields.title;
+    const { heading, content, mePict } = aboutData.fields;
+    const mePictSrc = `https:${mePict.fields.file.url}`;
+    const mePictTitle = mePict.fields.title;
+  
 
   return (
     <section className="about_me_section" id="about_me">
       <section className="content_section">
         <div className="container">
-          <h2 className="small_heading dark">{heading}</h2>
+          {aboutData ? (
+            <>
+              <h2 className="small_heading dark">{heading}</h2>
 
-          <div className="row justify-content-between">
-            <div className="col-12 col-md-6 col-xl-8">
-              <div className="large_text">
-                {aboutData ? (
-                  <>
-                    <div>
-                      {aboutData ? documentToReactComponents(content) : ""}
-                    </div>
-                  </>
-                ) : (
-                  ""
-                )}
-              </div>
-              <div className="link_text">
-                Ta en titt på ett urval av mina&nbsp;
-                <HashLink to="#cases" className="section_link">
-                  Projekt
-                </HashLink>
-              </div>
-            </div>
-            <div className="col-12 col-md-6 col-xl-4">
-              <div className="styled_card pict">
-                {aboutData ? (
-                  <>
+              <div className="row justify-content-between">
+                <div className="col-12 col-md-6 col-xl-8">
+                  <div className="large_text">
+                    {aboutData ? documentToReactComponents(content) : ""}
+                  </div>
+                  <div className="link_text">
+                    Ta en titt på ett urval av mina&nbsp;
+                    <HashLink to="#cases" className="section_link">
+                      Projekt
+                    </HashLink>
+                  </div>
+                </div>
+                <div className="col-12 col-md-6 col-xl-4">
+                  <div className="styled_card pict">
                     <img
                       src={mePictSrc}
                       alt={mePictTitle}
                       className="me_pict"
                       style={{ width: "100%", height: "100%" }}
                     />
-                  </>
-                ) : (
-                  ""
-                )}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            </>
+          ) : (
+            ""
+          )}
         </div>
       </section>
     </section>

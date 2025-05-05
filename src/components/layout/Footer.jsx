@@ -70,7 +70,7 @@ const Footer = () => {
             </p>{" "}
           </div>
           <div className="back_to_top_link">
-            <a href="#nav_header"           aria-label="Back to top of page.">
+            <a href="#nav_header" aria-label="Back to top of page.">
               <span className="to_top_icon">
                 {" "}
                 <i className="fas fa-angle-up"></i>

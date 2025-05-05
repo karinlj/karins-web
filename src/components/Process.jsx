@@ -43,21 +43,26 @@ const Process = () => {
     );
   }
 
-  const { heading, description, text } = workProcess.fields;
+    const { heading, description, text } = workProcess.fields;
+  
   return (
     <section className="process_section" id="process">
       <div className="container">
-        <h2 className="small_heading white">{heading}</h2>
+        {workProcess ? <h2 className="small_heading white">{heading}</h2> : ""}
       </div>
       <section className="content_section white">
         <div className="container">
           <div className="row justify-content-between">
-            <div className="col-12 col-md-6">
-              <p className="large_text">{description}</p>
-              <p className="medium_text">{text}</p>
+            {workProcess ? (
+              <div className="col-12 col-md-6">
+                <p className="large_text">{description}</p>
+                <p className="medium_text">{text}</p>
 
-              <img src={arrow} alt="arrow pict" className="arrow_pict" />
-            </div>
+                <img src={arrow} alt="arrow pict" className="arrow_pict" />
+              </div>
+            ) : (
+              ""
+            )}
 
             <div className="col-12 col-lg-6">
               {/* timeline */}

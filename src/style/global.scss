@@ -158,7 +158,7 @@ a {
 }
 .loading {
   padding: 0.5rem 1rem;
-  color: vars.$textcolor_lighter;
+  opacity: 0;
 }
 //fonts - styles and sizes
 .content_section {
@@ -507,10 +507,10 @@ a {
     }
   }
   .medium_text {
-     font-weight: 700;
-     &.light {
+    font-weight: 700;
+    &.light {
       font-weight: 400;
-     }
+    }
   }
   .styled_card {
     padding: 1rem 1rem 2rem 1rem;
