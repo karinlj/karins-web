@@ -40,7 +40,7 @@ const Cases = () => {
   return (
     <section className="cases_section" id="cases">
       <div className="container">
-        <h2 className="small_heading">Ett urval av mina kundprojekt</h2>
+      {testimonialItems ? <h2 className="small_heading">Ett urval av mina kundprojekt</h2> : ""}
       </div>
       <section className="content_section">
         <section className="testimonial_items_section">

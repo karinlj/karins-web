@@ -42,7 +42,7 @@ const AboutMe = () => {
               <div className="row justify-content-between">
                 <div className="col-12 col-md-6 col-xl-8">
                   <div className="large_text">
-                    {aboutData ? documentToReactComponents(content) : ""}
+                    {documentToReactComponents(content)}
                   </div>
                   <div className="link_text">
                     Ta en titt på ett urval av mina&nbsp;

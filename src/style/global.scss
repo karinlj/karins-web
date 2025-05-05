@@ -202,23 +202,22 @@ a {
 }
 
 .large_text {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 1rem;
   @media all and (min-width: vars.$laptop) {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
   @media all and (min-width: vars.$desktopL) {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
   p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     @media all and (min-width: vars.$laptop) {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
     }
     @media all and (min-width: vars.$desktopL) {
-      font-size: 2.2rem;
+      font-size: 2.1rem;
     }
   }
 }

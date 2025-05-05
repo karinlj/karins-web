@@ -42,9 +42,8 @@ const Process = () => {
       </div>
     );
   }
+  const { heading, description, text } = workProcess.fields;
 
-    const { heading, description, text } = workProcess.fields;
-  
   return (
     <section className="process_section" id="process">
       <div className="container">
