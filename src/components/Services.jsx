@@ -32,7 +32,7 @@ const Services = () => {
     getServicesItems();
   }, []);
 
-  if (!servicesData || !servicesItems) {
+  if (!servicesData || servicesItems.length <= 0) {
     return (
       <div className="container">
         <div className="loading">Loading ...</div>

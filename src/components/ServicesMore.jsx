@@ -28,7 +28,7 @@ const ServicesMore = () => {
     // }
   }, []);
 
-  if (!sericesMoreItems) {
+  if (sericesMoreItems.length <= 0) {
     return (
       <div className="container">
         <div className="loading">Loading ...</div>

@@ -35,7 +35,7 @@ const Process = () => {
     // }
   }, []);
 
-  if (!workProcess || !timelineItems) {
+  if (!workProcess || timelineItems.length <= 0) {
     return (
       <div className="container">
         <div className="loading">Loading ...</div>

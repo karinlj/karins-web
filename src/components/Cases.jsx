@@ -30,7 +30,7 @@ const Cases = () => {
     getTestimonialItemsData();
   }, []);
 
-  if (!caseItems || !testimonialItems) {
+  if (!caseItems || testimonialItems.length <= 0) {
     return (
       <div className="container">
         <div className="loading">Loading ...</div>
@@ -40,7 +40,7 @@ const Cases = () => {
   return (
     <section className="cases_section" id="cases">
       <div className="container">
-      {testimonialItems ? <h2 className="small_heading">Ett urval av mina kundprojekt</h2> : ""}
+      {testimonialItems && testimonialItems.length > 0 ?  <h2 className="small_heading">Ett urval av mina kundprojekt</h2> : ""}
       </div>
       <section className="content_section">
         <section className="testimonial_items_section">
