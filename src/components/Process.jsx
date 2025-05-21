@@ -54,7 +54,7 @@ const Process = () => {
           <div className="row justify-content-between">
             {workProcess ? (
               <div className="col-12 col-md-6">
-                <p className="large_text">{description}</p>
+                <p className="large_text margin_1">{description}</p>
                 <p className="medium_text">{text}</p>
 
                 <img src={arrow} alt="arrow pict" className="arrow_pict" />

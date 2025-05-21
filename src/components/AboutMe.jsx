@@ -46,7 +46,7 @@ const AboutMe = () => {
                   </div>
                   <div className="link_text">
                     Ta en titt på ett urval av mina&nbsp;
-                    <HashLink to="#cases" className="section_link">
+                    <HashLink to="#case" className="section_link">
                       Projekt
                     </HashLink>
                   </div>

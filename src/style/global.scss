@@ -1,5 +1,17 @@
 @use "variables" as vars;
 
+@mixin squares_overlay() {
+  background: linear-gradient(
+    -90deg,
+    rgba(73, 129, 194, 0.08) 1px,
+    transparent 1px
+  ),
+  linear-gradient(rgba(73, 129, 194, 0.08) 1px, transparent 1px), #fff;
+  background-size: 30px 30px, 30px 30px, 80px 80px, 80px 80px, 80px 80px,
+  80px 80px, 80px 80px, 80px 80px;
+  background-color: #fff;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   height: 100%;
@@ -34,7 +46,7 @@ html {
 }
 body {
   position: relative;
-  color: vars.$textcolor_dark;
+  color: vars.$textcolor_darkest;
   font-weight: 400;
   transition: all 0.2s linear;
 }
@@ -153,7 +165,7 @@ a {
   color: vars.$linkcolor;
   transition: all 1s ease;
   &:hover {
-    filter: drop-shadow(0 0 3px vars.$textcolor_white);
+    filter: drop-shadow(f0 0 3px vars.$textcolor_white);
   }
 }
 .loading {
@@ -199,8 +211,14 @@ a {
   @media all and (min-width: vars.$laptopL) {
     font-size: 1.4rem;
   }
+  p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    @media all and (min-width: vars.$laptop) {
+      font-size: 1.4rem;
+    }
+  }
 }
-
 .large_text {
   font-size: 1.4rem;
   font-weight: 700;
@@ -284,7 +302,18 @@ a {
     position: relative;
   }
 }
-
+.margin_1 {
+  margin-bottom: 0.5rem;
+  @media all and (min-width: vars.$laptopL) {
+    margin-bottom: 1rem;
+  }
+}
+.margin_2 {
+  margin-bottom: 1.5rem;
+  @media all and (min-width: vars.$laptopL) {
+    margin-bottom: 2rem;
+  }
+}
 .container {
   max-width: 1100px;
   width: 100%;
@@ -338,7 +367,21 @@ a {
   padding-top: 2rem;
   background: vars.$themecolorLilaDark;
   position: relative;
+  // background: url(../images/abstract_4.jpg) no-repeat center;
+  // background-size: cover;
 
+  // &::before {
+  //   // background-image: linear-gradient(to right bottom, #151c37, #1d274d, #253264, #2e3e7b, #384a94);
+  //   background-image: linear-gradient(to right bottom, #525298, #58589e, #5e5ea3, #6464a9, #6a6aaf);
+  //       opacity: 0.85;
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   content: "";
+  //   display: block;
+  // }
   @media all and (min-width: vars.$mobileS) {
     padding-top: 5rem;
   }
@@ -393,16 +436,11 @@ a {
   about_me_section
 ***********************/
 .about_me_section {
-  background: linear-gradient(
-      -90deg,
-      rgba(38, 80, 128, 0.08) 1px,
-      transparent 1px
-    ),
-    linear-gradient(rgba(73, 129, 194, 0.08) 1px, transparent 1px), #fff;
-  background-size: 30px 30px, 30px 30px, 80px 80px, 80px 80px, 80px 80px,
-    80px 80px, 80px 80px, 80px 80px;
-  background-color: #fff;
+  @include squares_overlay();
 
+  .large_text {
+    color: vars.$textcolor_dark;
+  }
   hr {
     visibility: hidden;
     padding: 1rem 0;
@@ -474,15 +512,8 @@ a {
  cases_section
 ***********************/
 .cases_section {
-  background: linear-gradient(
-      -90deg,
-      rgba(38, 80, 128, 0.08) 1px,
-      transparent 1px
-    ),
-    linear-gradient(rgba(73, 129, 194, 0.08) 1px, transparent 1px), #fff;
-  background-size: 30px 30px, 30px 30px, 80px 80px, 80px 80px, 80px 80px,
-    80px 80px, 80px 80px, 80px 80px;
-  background-color: #fff;
+  @include squares_overlay();
+
   .testimonial_items_section {
     margin-bottom: 3rem;
   }
@@ -520,7 +551,7 @@ a {
     &:hover {
       transform: translateY(-4px);
       color: vars.$themecolorPurple;
-      p {
+      h3 {
         text-decoration: underline;
       }
     }
@@ -591,15 +622,8 @@ a {
  services_more_section
 ***********************/
 .services_more_section {
-  background: linear-gradient(
-      -90deg,
-      rgba(38, 80, 128, 0.08) 1px,
-      transparent 1px
-    ),
-    linear-gradient(rgba(73, 129, 194, 0.08) 1px, transparent 1px), #fff;
-  background-size: 30px 30px, 30px 30px, 80px 80px, 80px 80px, 80px 80px,
-    80px 80px, 80px 80px, 80px 80px;
-  background-color: #fff;
+  @include squares_overlay();
+
   .accordion_content_section {
     margin-top: 3rem;
   }
@@ -616,7 +640,7 @@ a {
   border-radius: vars.$themeBorderRadius;
   width: 100%;
   text-align: left;
-  color: vars.$textcolor_dark;
+  color: vars.$textcolor_darkest;
   .heading {
     cursor: pointer;
     transition: all 0.4s linear;

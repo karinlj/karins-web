@@ -17,7 +17,7 @@ const Navlinks = ({ clickLink }) => {
             </HashLink>
           </li>
           <li className="link_item">
-            <HashLink to="#cases" onClick={clickLink} className="link">
+            <HashLink to="#case" onClick={clickLink} className="link">
               Case
             </HashLink>
           </li>

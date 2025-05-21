@@ -19,7 +19,7 @@ const Footer = () => {
         <h3 className="heading_2">Karin Ljunggren</h3>
         <div className="row justify-content-between">
           <div className="col-12 col-md-6 col-xl-4">
-            <p className="large_text white">Webbutvecklare</p>
+            <p className="large_text white margin_1">Webbutvecklare</p>
 
             <p className="medium_text">
               Jag designar, bygger och förvaltar skräddarsydda webbplatser.

@@ -38,7 +38,7 @@ const Cases = () => {
     );
   }
   return (
-    <section className="cases_section" id="cases">
+    <section className="cases_section" id="case">
       <div className="container">
       {testimonialItems && testimonialItems.length > 0 ?  <h2 className="small_heading">Ett urval av mina kundprojekt</h2> : ""}
       </div>
@@ -105,7 +105,9 @@ const Cases = () => {
                         <h3 className="case_item_heading">
                           {item.fields.heading}
                         </h3>
-                        <p className="medium_text">{item.fields.description}</p>
+                        <h3 className="medium_text margin_1">{item.fields.description}</h3>
+                        <p className="">{item.fields.descriptionExtra}</p>
+
                       </div>
                     </div>
                   );
