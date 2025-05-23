@@ -39,8 +39,16 @@ const Services = () => {
       </div>
     );
   }
-  const { heading, description, contactText, contactLink, contactLinkText, linkText, newsBannerHeading, newsBannerText } =
-    servicesData.fields;
+  const {
+    heading,
+    description,
+    contactText,
+    contactLink,
+    contactLinkText,
+    linkText,
+    newsBannerHeading,
+    newsBannerText,
+  } = servicesData.fields;
 
   return (
     <section className="services_section" id="services">
@@ -88,12 +96,10 @@ const Services = () => {
             </div>
             <div className="col">
               <div className="link_text">
-                <p>{contactText}</p>
-                <a
-                  href={contactLink}
-                  className="section_link"
-                >
-                 {contactLinkText}
+              <p className="margin_1">{contactText}</p>
+
+                <a href={contactLink} className="section_link">
+                  {contactLinkText}
                 </a>
               </div>
             </div>

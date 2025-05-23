@@ -37,7 +37,7 @@ const Header = () => {
         <div className="row justify-content-between align-items-center">
           <div className="col">
             <NavLink to="/" onClick={clickLink} className="logo_link">
-              <img src={logo} alt="logo" className="logo_karin_web"/>
+              <img src={logo} alt="logo" className="logo_karin_web" />
             </NavLink>
           </div>
 
@@ -55,19 +55,17 @@ const Header = () => {
           >
             <Navlinks clickLink={clickLink} />
           </nav>
-          <button className="theme_switch" onClick={toggleMode} aria-label="Light or dark mode switch">
-                {isDark ? (
-                  <i
-                    className="fas fa-sun"
-                    aria-hidden="true"
-                  ></i>
-                ) : (
-                  <i
-                    className="fas fa-moon"
-                    aria-hidden="true"
-                  ></i>
-                )}
-              </button>
+          <button
+            className="theme_switch"
+            onClick={toggleMode}
+            aria-label="Light or dark mode switch"
+          >
+            {isDark ? (
+              <i className="fas fa-sun" aria-hidden="true"></i>
+            ) : (
+              <i className="fas fa-moon" aria-hidden="true"></i>
+            )}
+          </button>
         </div>
       </div>
     </header>
