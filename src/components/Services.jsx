@@ -96,7 +96,9 @@ const Services = () => {
             </div>
             <div className="col">
               <div className="link_text">
-              <p className="margin_1">{contactText}</p>
+              <h3 className="heading_2">{contactText}</h3>
+
+              {/* <p className="margin_1">{contactText}</p> */}
 
                 <a href={contactLink} className="section_link">
                   {contactLinkText}

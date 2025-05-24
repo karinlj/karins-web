@@ -7,11 +7,10 @@
       transparent 1px
     ),
     linear-gradient(rgba(73, 129, 194, 0.08) 1px, transparent 1px), #fff;
-  background-size: 30px 30px, 30px 30px, 80px 80px, 80px 80px, 80px 80px,
+  background-size: 20px 20px, 20px 20px, 80px 80px, 80px 80px, 80px 80px,
     80px 80px, 80px 80px, 80px 80px;
   background-color: #fff;
 }
-
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   height: 100%;
@@ -202,17 +201,19 @@ a {
   }
 }
 .right_align {
-  margin-top: 2rem;
+  margin-top: 3rem;
+  @media all and (min-width: vars.$mobileM) {
+    margin-top: 0;
+  }
   @media all and (min-width: vars.$laptop) {
     text-align: right;
-    margin-top: 0;
   }
 }
 .small_heading {
   text-transform: uppercase;
   margin-bottom: 2rem;
-  // padding-top: 6rem;
-  font-size: 1.1rem;
+ line-height: 1.3;
+  font-size: 1.2rem;
   @media all and (min-width: vars.$mobileM) {
     font-size: 1.3rem;
   }
@@ -287,22 +288,19 @@ a {
 }
 
 .heading_2 {
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 1rem;
 
-  @media all and (min-width: vars.$mobileS) {
-    font-size: 2rem;
-  }
   @media all and (min-width: vars.$mobileM) {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   @media all and (min-width: vars.$laptop) {
     font-size: 3rem;
   }
   @media all and (min-width: vars.$laptopL) {
-    font-size: 4.5rem;
+    font-size: 4.3rem;
   }
 }
 //links
@@ -328,7 +326,7 @@ a {
 .margin_1 {
   margin-bottom: 0.5rem;
   @media all and (min-width: vars.$laptopL) {
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
   }
 }
 .margin_2 {
