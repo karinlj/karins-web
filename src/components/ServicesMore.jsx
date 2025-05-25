@@ -57,7 +57,7 @@ const ServicesMore = () => {
                       aria-expanded={openAccordion ? "true" : "false"}
                     >
                       <div className="heading">
-                        <h2 className="">{item.fields.heading}</h2>
+                        <h3 className="">{item.fields.heading}</h3>
                         <i className="fa-solid fa-angle-down"></i>
                       </div>
                       <p className="accordion_content medium_text">
