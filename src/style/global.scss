@@ -1005,7 +1005,7 @@ a {
   left: 0;
   height: 47rem;
   padding-top: calc(2rem + 5.5rem);
-  background: url(../images/clouds_1.jpg) no-repeat center;
+  background: url(../images/keyboard_2.jpg) no-repeat center;
   background-size: cover;
   &::before {
     background-image: linear-gradient(
@@ -1066,11 +1066,10 @@ a {
       margin-left: -8rem;
     }
     @media all and (min-width: vars.$laptopL) {
-      margin-left: -5rem;
+      margin-left: -2rem;
     }
     @media all and (min-width: vars.$desktopL) {
       width: 12rem;
-      margin-left: -5rem;
     }
   }
 }

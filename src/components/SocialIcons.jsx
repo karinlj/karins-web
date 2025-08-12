@@ -5,7 +5,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const SocialIcons = () => {
     const iconList = [
         {
-          url: "https://www.linkedin.com/company/karin-ljunggren-web-services",
+          url: "https://www.linkedin.com/in/karin-ljunggren/",
           icon: faLinkedin,
           ariaLabel: "Karin Ljunggren Linkedin",
           text: "Linkedin",
