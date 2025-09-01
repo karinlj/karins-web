@@ -20,7 +20,7 @@ const SocialIcons = () => {
             <li className="social_link_list_item" key={index}>
               <a
                 href={item.url}
-                target="_top"
+                target="_blank"
                 aria-label={item.ariaLabel}
                 className="link"
               >

@@ -1224,7 +1224,7 @@ a {
       justify-content: flex-end;
     }
     .link_icon {
-      margin-left: 0 !important;
+      margin-right: 0 !important;
     }
   }
 }
@@ -1267,9 +1267,18 @@ p.footer_copy {
 }
 
 .back_to_top_link {
-  font-size: 1.7rem;
+  background: #fff;
+  border-radius: calc(vars.$themeBorderRadius/2);
+  padding: 3px;
+  height: 1.9rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
   @media all and (min-width: vars.$laptop) {
-    font-size: 2.1rem;
+    font-size: 1.7rem;
+  }
+  a{
+    color: vars.$themecolorLilaSuperDark;
   }
 }
 
