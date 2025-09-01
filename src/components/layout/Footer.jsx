@@ -23,7 +23,7 @@ const Footer = () => {
 
             <p className="medium_text">
               Jag designar, bygger och förvaltar skräddarsydda webbplatser.
-              Hjälper gärna till och drivs av att göra skillnad!{" "}
+              Snyggt, enkelt, tydligt och fungerande. 
             </p>
           </div>
 
